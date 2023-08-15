@@ -1,0 +1,90 @@
+{
+    "@context": "http://www.w3.org/ns/csvw",
+    "@type": "TableGroup",
+    "tables": [
+        {
+            "@type": "Table",
+            "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1126255/gas_GOR_stacked_2005-21.csv",
+            "https://purl.org/berg/csvw_functions/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1126255/gas_GOR_stacked_2005-21.csv", 
+            "https://purl.org/berg/csvw_functions/vocab/csv_file_name": "gas_GOR_stacked_2005_21.csv",
+            "https://purl.org/berg/csvw_functions/vocab/sql_table_name": "gas_GOR_stacked_2005_21",
+            "rdfs:seeAlso": "https://www.gov.uk/government/statistical-data-sets/stacked-gas-consumption-statistics-data",  
+            "tableSchema": {
+                "columns": [
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1126256/gas_LA_stacked_2005-21.csv",
+            "https://purl.org/berg/csvw_functions/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1126256/gas_LA_stacked_2005-21.csv", 
+            "https://purl.org/berg/csvw_functions/vocab/csv_file_name": "gas_LA_stacked_2005_21.csv",
+            "https://purl.org/berg/csvw_functions/vocab/sql_table_name": "gas_LA_stacked_2005_21",
+            "rdfs:seeAlso": "https://www.gov.uk/government/statistical-data-sets/stacked-gas-consumption-statistics-data",  
+            "tableSchema": {
+                "columns": [
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1126259/gas_domestic_MSOA_stacked_2010-21.csv",
+            "https://purl.org/berg/csvw_functions/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1126259/gas_domestic_MSOA_stacked_2010-21.csv", 
+            "https://purl.org/berg/csvw_functions/vocab/csv_file_name": "gas_domestic_MSOA_stacked_2010_21.csv",
+            "https://purl.org/berg/csvw_functions/vocab/sql_table_name": "gas_domestic_MSOA_stacked_2010_21",
+            "rdfs:seeAlso": "https://www.gov.uk/government/statistical-data-sets/stacked-gas-consumption-statistics-data",  
+            "tableSchema": {
+                "columns": [
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1126258/gas_domestic_LSOA_stacked_2010-21.csv",
+            "https://purl.org/berg/csvw_functions/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1126258/gas_domestic_LSOA_stacked_2010-21.csv", 
+            "https://purl.org/berg/csvw_functions/vocab/csv_file_name": "gas_domestic_LSOA_stacked_2010_21.csv",
+            "https://purl.org/berg/csvw_functions/vocab/sql_table_name": "gas_domestic_LSOA_stacked_2010_21",
+            "rdfs:seeAlso": "https://www.gov.uk/government/statistical-data-sets/stacked-gas-consumption-statistics-data",  
+            "tableSchema": {
+                "columns": [
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1126260/gas_non_domestic_MSOA_stacked_2010-21.csv",
+            "https://purl.org/berg/csvw_functions/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1126260/gas_non_domestic_MSOA_stacked_2010-21.csv", 
+            "https://purl.org/berg/csvw_functions/vocab/csv_file_name": "gas_non_domestic_MSOA_stacked_2010_21.csv",
+            "https://purl.org/berg/csvw_functions/vocab/sql_table_name": "gas_non_domestic_MSOA_stacked_2010_21",
+            "rdfs:seeAlso": "https://www.gov.uk/government/statistical-data-sets/stacked-gas-consumption-statistics-data",  
+            "tableSchema": {
+                "columns": [
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1131256/Postcode_level_gas_2021.csv",
+            "https://purl.org/berg/csvw_functions/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1131256/Postcode_level_gas_2021.csv", 
+            "https://purl.org/berg/csvw_functions/vocab/csv_file_name": "Postcode_level_gas_2021.csv",
+            "https://purl.org/berg/csvw_functions/vocab/sql_table_name": "Postcode_level_gas_2021",
+            "rdfs:seeAlso": "https://www.gov.uk/government/statistics/postcode-level-gas-statistics-2021-experimental",  
+            "tableSchema": {
+                "columns": [
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "tet.csv",
+            "https://purl.org/berg/csvw_functions/vocab/csv_download_url": "", 
+            "https://purl.org/berg/csvw_functions/vocab/csv_file_name": "",
+            "https://purl.org/berg/csvw_functions/vocab/sql_table_name": "",
+            "rdfs:seeAlso": "",  
+            "tableSchema": {
+                "columns": [
+                ]
+            }
+        }
+    ]
+}
