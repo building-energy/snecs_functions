@@ -10,7 +10,23 @@
             "https://purl.org/berg/csvw_functions/vocab/sql_table_name": "gas_GOR_stacked_2005_21",
             "rdfs:seeAlso": "https://www.gov.uk/government/statistical-data-sets/stacked-gas-consumption-statistics-data",  
             "tableSchema": {
+                "primaryKey": ["year","region.code"],
                 "columns": [
+                    {"name": "year", "datatype": "integer"},
+                    {"name": "region.code", "datatype": "string"},
+                    {"name": "region", "datatype": "string"},
+                    {"name": "domestic.meters", "datatype": "decimal"},
+                    {"name": "non.domestic.meters", "datatype": "decimal"},
+                    {"name": "total.meters", "datatype": "decimal"},
+                    {"name": "domestic.sales.gwh", "datatype": "decimal"},
+                    {"name": "non.domestic.sales.gwh", "datatype": "decimal"},
+                    {"name": "total.sales.gwh", "datatype": "decimal"},
+                    {"name": "domestic.mean.kwh", "datatype": "decimal"},
+                    {"name": "non.domestic.mean.kwh", "datatype": "decimal"},
+                    {"name": "mean.kwh", "datatype": "decimal"},
+                    {"name": "domestic.median.kwh", "datatype": "decimal"},
+                    {"name": "non.domestic.median.kwh", "datatype": "decimal"},
+                    {"name": "median.kwh", "datatype": "decimal"}
                 ]
             }
         },
@@ -21,8 +37,27 @@
             "https://purl.org/berg/csvw_functions/vocab/csv_file_name": "gas_LA_stacked_2005_21.csv",
             "https://purl.org/berg/csvw_functions/vocab/sql_table_name": "gas_LA_stacked_2005_21",
             "rdfs:seeAlso": "https://www.gov.uk/government/statistical-data-sets/stacked-gas-consumption-statistics-data",  
+            "dialect": {"encoding": "ansi_x3.4-1968"},
             "tableSchema": {
+                "primaryKey": ["Year","la.code","lau1"],
                 "columns": [
+                    {"name": "Year", "datatype": "integer"},
+                    {"name": "la.code", "datatype": "string"},
+                    {"name": "lau1", "datatype": "string"},
+                    {"name": "region", "datatype": "string"},
+                    {"name": "la.name", "datatype": "string"},
+                    {"name": "domestic.meters", "datatype": "decimal"},
+                    {"name": "non.domestic.meters", "datatype": "decimal"},
+                    {"name": "total.meters", "datatype": "decimal"},
+                    {"name": "domestic.sales.gwh", "datatype": "decimal"},
+                    {"name": "non.domestic.sales.gwh", "datatype": "decimal"},
+                    {"name": "total.sales.gwh", "datatype": "decimal"},
+                    {"name": "domestic.mean.kwh", "datatype": "decimal"},
+                    {"name": "non.domestic.mean.kwh", "datatype": "decimal"},
+                    {"name": "mean.kwh", "datatype": "decimal"},
+                    {"name": "domestic.median.kwh", "datatype": "decimal"},
+                    {"name": "non.domestic.median.kwh", "datatype": "decimal"},
+                    {"name": "median.kwh", "datatype": "decimal"}
                 ]
             }
         },
@@ -34,7 +69,17 @@
             "https://purl.org/berg/csvw_functions/vocab/sql_table_name": "gas_domestic_MSOA_stacked_2010_21",
             "rdfs:seeAlso": "https://www.gov.uk/government/statistical-data-sets/stacked-gas-consumption-statistics-data",  
             "tableSchema": {
+                "primaryKey": ["Year","msoa.code"],
                 "columns": [
+                    {"name": "Year", "datatype": "integer"},
+                    {"name": "la.code", "datatype": "string"},
+                    {"name": "la.name", "datatype": "string"},
+                    {"name": "msoa.code", "datatype": "string"},
+                    {"name": "msoa.name", "datatype": "string"},
+                    {"name": "total.meters", "datatype": "integer"},
+                    {"name": "total.kwh", "datatype": "decimal"},
+                    {"name": "mean.kwh", "datatype": "decimal"},
+                    {"name": "median.kwh", "datatype": "decimal"}
                 ]
             }
         },
@@ -46,7 +91,19 @@
             "https://purl.org/berg/csvw_functions/vocab/sql_table_name": "gas_domestic_LSOA_stacked_2010_21",
             "rdfs:seeAlso": "https://www.gov.uk/government/statistical-data-sets/stacked-gas-consumption-statistics-data",  
             "tableSchema": {
+                "primaryKey":["year","lsoa.code"],
                 "columns": [
+                    {"name": "year", "datatype": "integer"},
+                    {"name": "la.name", "datatype": "string"},
+                    {"name": "la.code", "datatype": "string"},
+                    {"name": "msoa.name", "datatype": "string"},
+                    {"name": "msoa.code", "datatype": "string"},
+                    {"name": "lsoa.name", "datatype": "string"},
+                    {"name": "lsoa.code", "datatype": "string"},
+                    {"name": "total.meters", "datatype": "integer"},
+                    {"name": "total.kwh", "datatype": "decimal"},
+                    {"name": "mean.kwh", "datatype": "decimal"},
+                    {"name": "median.kwh", "datatype": "decimal"}
                 ]
             }
         },
@@ -58,7 +115,17 @@
             "https://purl.org/berg/csvw_functions/vocab/sql_table_name": "gas_non_domestic_MSOA_stacked_2010_21",
             "rdfs:seeAlso": "https://www.gov.uk/government/statistical-data-sets/stacked-gas-consumption-statistics-data",  
             "tableSchema": {
+                "primaryKey":["year","msoa.code"],
                 "columns": [
+                    {"name": "year", "datatype": "integer"},
+                    {"name": "la.code", "datatype": "string"},
+                    {"name": "la.name", "datatype": "string"},
+                    {"name": "msoa.code", "datatype": "string"},
+                    {"name": "msoa.name", "datatype": "string"},
+                    {"name": "total.meters", "datatype": "integer"},
+                    {"name": "total.kwh", "datatype": "decimal"},
+                    {"name": "mean.kwh", "datatype": "decimal"},
+                    {"name": "median.kwh", "datatype": "decimal"}
                 ]
             }
         },
@@ -70,21 +137,28 @@
             "https://purl.org/berg/csvw_functions/vocab/sql_table_name": "Postcode_level_gas_2021",
             "rdfs:seeAlso": "https://www.gov.uk/government/statistics/postcode-level-gas-statistics-2021-experimental",  
             "tableSchema": {
+                "primaryKey":["Outcode","Postcode"],
                 "columns": [
-                ]
-            }
-        },
-        {
-            "@type": "Table",
-            "url": "tet.csv",
-            "https://purl.org/berg/csvw_functions/vocab/csv_download_url": "", 
-            "https://purl.org/berg/csvw_functions/vocab/csv_file_name": "",
-            "https://purl.org/berg/csvw_functions/vocab/sql_table_name": "",
-            "rdfs:seeAlso": "",  
-            "tableSchema": {
-                "columns": [
+                    {"name": "Outcode", "datatype": "string"},
+                    {"name": "Postcode", "datatype": "string"},
+                    {"name": "Num_meters", "datatype": "integer"},
+                    {"name": "Total_cons_kwh", "datatype": "decimal"},
+                    {"name": "Mean_cons_kwh", "datatype": "decimal"},
+                    {"name": "Median_cons_kwh", "datatype": "decimal"}
                 ]
             }
         }
-    ]
+    ],
+    "https://purl.org/berg/csvw_functions/vocab/sql_table_name/placeholder":{
+        "@type": "Table",
+        "url": "tet.csv",
+        "https://purl.org/berg/csvw_functions/vocab/csv_download_url": "", 
+        "https://purl.org/berg/csvw_functions/vocab/csv_file_name": "",
+        "https://purl.org/berg/csvw_functions/vocab/sql_table_name": "",
+        "rdfs:seeAlso": "",  
+        "tableSchema": {
+            "columns": [
+            ]
+        }
+    }
 }
