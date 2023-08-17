@@ -77,27 +77,110 @@ def _read_metadata_table_group_dict(
     
 #%% main functions
 
-def get_region_from_local_authority_district(
-        lad_code,
-        fp_database=os.path.join(_default_data_folder,_default_database_name)
+def _convert_to_iterator(
+        x
         ):
-    """
-    """
+    ""
+    if x is None:
+        return []
+    elif isinstance(x,str):
+        return [x]
+    else:
+        try:   
+            _ = iter(x)
+            return x
+        except TypeError:
+            return [x]
+            
+
+def _get_where_clause_list(
+        d
+        ):
+    ""
+    conditions=[]
     
-    table_name='Local_Authority_District_to_Region_December_2022'
-    
-    with sqlite3.connect(fp_database) as conn:
-        c = conn.cursor()
-        query=f"""
-        SELECT
-            RGN22CD
-        FROM
-            "{table_name}"
-        WHERE
-            LAD22CD = "{lad_code}"
-        """
-        #print(query)
-        result=[x[0] for x in c.execute(query).fetchall()]
+    for k,v in d.items():
+        
+        if not v is None:
+            
+            x=_convert_to_iterator(v)
+            x=[f'"{x}"' if isinstance(x,str) else f'{x}' for x in x] 
+            if len(x)==1:
+                x=f'("{k}" = {x[0]})'
+            elif len(x)>1:
+                x=','.join(x)
+                x=f'("{k}" IN ({x}))'
+            conditions.append(x)
+            
+    result=''
+            
+    if len(conditions)>0:
+        
+        x=' AND '.join(conditions)
+        result=f'WHERE {x}'
         
     return result
 
+
+
+def get_government_office_region_gas(
+        year=None,
+        region_code=None,
+        data_folder=_default_data_folder,
+        database_name=_default_database_name,
+        verbose=False
+        ):
+    ""
+    table_name='gas_GOR_stacked_2005_21'
+    
+    fp_database=os.path.join(data_folder,database_name)
+    
+    where_clause=_get_where_clause_list(
+        {'year':year, 'region.code':region_code}
+        )
+        
+    query=f"SELECT * FROM {table_name} {where_clause};"
+    if verbose:
+        print(query)
+    
+    with sqlite3.connect(fp_database) as conn:
+        conn.row_factory = sqlite3.Row
+        c = conn.cursor()
+        result=[dict(x) for x in c.execute(query).fetchall()]
+        
+    return result
+    
+
+
+def get_postcode_gas(
+        year,
+        postcode=None,
+        outcode=None,
+        data_folder=_default_data_folder,
+        database_name=_default_database_name,
+        verbose=False
+        ):
+    ""
+    table_name=f'Postcode_level_gas_{year}'
+    
+    fp_database=os.path.join(data_folder,database_name)
+    
+    where_clause=_get_where_clause_list(
+        dict(
+            Postcode=postcode,
+            Outcode=outcode
+            )
+        )
+        
+    query=f"SELECT * FROM {table_name} {where_clause};"
+    if verbose:
+        print(query)
+    
+    with sqlite3.connect(fp_database) as conn:
+        conn.row_factory = sqlite3.Row
+        c = conn.cursor()
+        result=[dict(x) for x in c.execute(query).fetchall()]
+        
+    return result
+    
+    

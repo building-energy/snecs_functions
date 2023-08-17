@@ -12,8 +12,8 @@
             "tableSchema": {
                 "primaryKey": ["year","region.code"],
                 "columns": [
-                    {"name": "year", "datatype": "integer"},
-                    {"name": "region.code", "datatype": "string"},
+                    {"name": "year", "datatype": "integer", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "region.code", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
                     {"name": "region", "datatype": "string"},
                     {"name": "domestic.meters", "datatype": "decimal"},
                     {"name": "non.domestic.meters", "datatype": "decimal"},
@@ -41,9 +41,9 @@
             "tableSchema": {
                 "primaryKey": ["Year","la.code","lau1"],
                 "columns": [
-                    {"name": "Year", "datatype": "integer"},
-                    {"name": "la.code", "datatype": "string"},
-                    {"name": "lau1", "datatype": "string"},
+                    {"name": "Year", "datatype": "integer", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "la.code", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "lau1", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
                     {"name": "region", "datatype": "string"},
                     {"name": "la.name", "datatype": "string"},
                     {"name": "domestic.meters", "datatype": "decimal"},
@@ -71,10 +71,10 @@
             "tableSchema": {
                 "primaryKey": ["Year","msoa.code"],
                 "columns": [
-                    {"name": "Year", "datatype": "integer"},
-                    {"name": "la.code", "datatype": "string"},
+                    {"name": "Year", "datatype": "integer", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "la.code", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
                     {"name": "la.name", "datatype": "string"},
-                    {"name": "msoa.code", "datatype": "string"},
+                    {"name": "msoa.code", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
                     {"name": "msoa.name", "datatype": "string"},
                     {"name": "total.meters", "datatype": "integer"},
                     {"name": "total.kwh", "datatype": "decimal"},
@@ -93,13 +93,13 @@
             "tableSchema": {
                 "primaryKey":["year","lsoa.code"],
                 "columns": [
-                    {"name": "year", "datatype": "integer"},
+                    {"name": "year", "datatype": "integer", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
                     {"name": "la.name", "datatype": "string"},
-                    {"name": "la.code", "datatype": "string"},
+                    {"name": "la.code", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
                     {"name": "msoa.name", "datatype": "string"},
-                    {"name": "msoa.code", "datatype": "string"},
+                    {"name": "msoa.code", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
                     {"name": "lsoa.name", "datatype": "string"},
-                    {"name": "lsoa.code", "datatype": "string"},
+                    {"name": "lsoa.code", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
                     {"name": "total.meters", "datatype": "integer"},
                     {"name": "total.kwh", "datatype": "decimal"},
                     {"name": "mean.kwh", "datatype": "decimal"},
@@ -117,10 +117,10 @@
             "tableSchema": {
                 "primaryKey":["year","msoa.code"],
                 "columns": [
-                    {"name": "year", "datatype": "integer"},
-                    {"name": "la.code", "datatype": "string"},
+                    {"name": "year", "datatype": "integer", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "la.code", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
                     {"name": "la.name", "datatype": "string"},
-                    {"name": "msoa.code", "datatype": "string"},
+                    {"name": "msoa.code", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
                     {"name": "msoa.name", "datatype": "string"},
                     {"name": "total.meters", "datatype": "integer"},
                     {"name": "total.kwh", "datatype": "decimal"},
@@ -139,8 +139,122 @@
             "tableSchema": {
                 "primaryKey":["Outcode","Postcode"],
                 "columns": [
-                    {"name": "Outcode", "datatype": "string"},
-                    {"name": "Postcode", "datatype": "string"},
+                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "Num_meters", "datatype": "integer"},
+                    {"name": "Total_cons_kwh", "datatype": "decimal"},
+                    {"name": "Mean_cons_kwh", "datatype": "decimal"},
+                    {"name": "Median_cons_kwh", "datatype": "decimal"}
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1131391/Postcode_level_gas_2020.csv",
+            "https://purl.org/berg/csvw_functions/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1131391/Postcode_level_gas_2020.csv", 
+            "https://purl.org/berg/csvw_functions/vocab/csv_file_name": "Postcode_level_gas_2020.csv",
+            "https://purl.org/berg/csvw_functions/vocab/sql_table_name": "Postcode_level_gas_2020",
+            "rdfs:seeAlso": "https://www.gov.uk/government/statistics/postcode-level-gas-statistics-2020-experimental",  
+            "tableSchema": {
+                "primaryKey":["Outcode","Postcode"],
+                "columns": [
+                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "Num_meters", "datatype": "integer"},
+                    {"name": "Total_cons_kwh", "datatype": "decimal"},
+                    {"name": "Mean_cons_kwh", "datatype": "decimal"},
+                    {"name": "Median_cons_kwh", "datatype": "decimal"}
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1131396/Postcode_level_gas_2019.csv",
+            "https://purl.org/berg/csvw_functions/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1131396/Postcode_level_gas_2019.csv", 
+            "https://purl.org/berg/csvw_functions/vocab/csv_file_name": "Postcode_level_gas_2019.csv",
+            "https://purl.org/berg/csvw_functions/vocab/sql_table_name": "Postcode_level_gas_2019",
+            "rdfs:seeAlso": "https://www.gov.uk/government/statistics/postcode-level-gas-statistics-2019-experimental",  
+            "tableSchema": {
+                "primaryKey":["Outcode","Postcode"],
+                "columns": [
+                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "Num_meters", "datatype": "integer"},
+                    {"name": "Total_cons_kwh", "datatype": "decimal"},
+                    {"name": "Mean_cons_kwh", "datatype": "decimal"},
+                    {"name": "Median_cons_kwh", "datatype": "decimal"}
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1131398/Postcode_level_gas_2018.csv",
+            "https://purl.org/berg/csvw_functions/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1131398/Postcode_level_gas_2018.csv", 
+            "https://purl.org/berg/csvw_functions/vocab/csv_file_name": "Postcode_level_gas_2018",
+            "https://purl.org/berg/csvw_functions/vocab/sql_table_name": "Postcode_level_gas_2018.csv",
+            "rdfs:seeAlso": "https://www.gov.uk/government/statistics/postcode-level-gas-statistics-2018-experimental",  
+            "tableSchema": {
+                "primaryKey":["Outcode","Postcode"],
+                "columns": [
+                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "Num_meters", "datatype": "integer"},
+                    {"name": "Total_cons_kwh", "datatype": "decimal"},
+                    {"name": "Mean_cons_kwh", "datatype": "decimal"},
+                    {"name": "Median_cons_kwh", "datatype": "decimal"}
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1131402/Postcode_level_gas_2017.csv",
+            "https://purl.org/berg/csvw_functions/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1131402/Postcode_level_gas_2017.csv", 
+            "https://purl.org/berg/csvw_functions/vocab/csv_file_name": "Postcode_level_gas_2017.csv",
+            "https://purl.org/berg/csvw_functions/vocab/sql_table_name": "Postcode_level_gas_2017",
+            "rdfs:seeAlso": "https://www.gov.uk/government/statistics/postcode-level-gas-statistics-2017-experimental",  
+            "tableSchema": {
+                "primaryKey":["Outcode","Postcode"],
+                "columns": [
+                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "Num_meters", "datatype": "integer"},
+                    {"name": "Total_cons_kwh", "datatype": "decimal"},
+                    {"name": "Mean_cons_kwh", "datatype": "decimal"},
+                    {"name": "Median_cons_kwh", "datatype": "decimal"}
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1131404/Postcode_level_gas_2016.csv",
+            "https://purl.org/berg/csvw_functions/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1131404/Postcode_level_gas_2016.csv", 
+            "https://purl.org/berg/csvw_functions/vocab/csv_file_name": "Postcode_level_gas_2016.csv",
+            "https://purl.org/berg/csvw_functions/vocab/sql_table_name": "Postcode_level_gas_2016",
+            "rdfs:seeAlso": "https://www.gov.uk/government/statistics/postcode-level-gas-statistics-2016-experimental",  
+            "tableSchema": {
+                "primaryKey":["Outcode","Postcode"],
+                "columns": [
+                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "Num_meters", "datatype": "integer"},
+                    {"name": "Total_cons_kwh", "datatype": "decimal"},
+                    {"name": "Mean_cons_kwh", "datatype": "decimal"},
+                    {"name": "Median_cons_kwh", "datatype": "decimal"}
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1131407/Postcode_level_gas_2015.csv",
+            "https://purl.org/berg/csvw_functions/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1131407/Postcode_level_gas_2015.csv", 
+            "https://purl.org/berg/csvw_functions/vocab/csv_file_name": "Postcode_level_gas_2015.csv",
+            "https://purl.org/berg/csvw_functions/vocab/sql_table_name": "Postcode_level_gas_2015",
+            "rdfs:seeAlso": "https://www.gov.uk/government/statistics/postcode-level-gas-statistics-2015-experimental",  
+            "tableSchema": {
+                "primaryKey":["Outcode","Postcode"],
+                "columns": [
+                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
                     {"name": "Num_meters", "datatype": "integer"},
                     {"name": "Total_cons_kwh", "datatype": "decimal"},
                     {"name": "Mean_cons_kwh", "datatype": "decimal"},
@@ -151,7 +265,7 @@
     ],
     "https://purl.org/berg/csvw_functions/vocab/sql_table_name/placeholder":{
         "@type": "Table",
-        "url": "tet.csv",
+        "url": "test.csv",
         "https://purl.org/berg/csvw_functions/vocab/csv_download_url": "", 
         "https://purl.org/berg/csvw_functions/vocab/csv_file_name": "",
         "https://purl.org/berg/csvw_functions/vocab/sql_table_name": "",
