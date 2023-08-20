@@ -122,6 +122,34 @@ def _get_where_clause_list(
     return result
 
 
+def get_government_office_region_elec(
+        year=None,
+        region_code=None,
+        data_folder=_default_data_folder,
+        database_name=_default_database_name,
+        verbose=False
+        ):
+    ""
+    table_name='elec_GOR_stacked_2005_21'
+    
+    fp_database=os.path.join(data_folder,database_name)
+    
+    where_clause=_get_where_clause_list(
+        {'year':year, 'gor':region_code}
+        )
+        
+    query=f"SELECT * FROM {table_name} {where_clause};"
+    if verbose:
+        print(query)
+    
+    with sqlite3.connect(fp_database) as conn:
+        conn.row_factory = sqlite3.Row
+        c = conn.cursor()
+        result=[dict(x) for x in c.execute(query).fetchall()]
+        
+    return result
+
+
 
 def get_government_office_region_gas(
         year=None,
@@ -150,6 +178,188 @@ def get_government_office_region_gas(
         
     return result
     
+
+
+def get_local_authority_elec(
+        year=None,
+        la_code=None,
+        data_folder=_default_data_folder,
+        database_name=_default_database_name,
+        verbose=False
+        ):
+    ""
+    table_name='elec_LA_stacked_2005_21'
+    
+    fp_database=os.path.join(data_folder,database_name)
+    
+    where_clause=_get_where_clause_list(
+        {'year':year, 'la_code':la_code}
+        )
+        
+    query=f"SELECT * FROM {table_name} {where_clause};"
+    if verbose:
+        print(query)
+    
+    with sqlite3.connect(fp_database) as conn:
+        conn.row_factory = sqlite3.Row
+        c = conn.cursor()
+        result=[dict(x) for x in c.execute(query).fetchall()]
+        
+    return result
+
+
+
+def get_local_authority_gas(
+        year=None,
+        la_code=None,
+        data_folder=_default_data_folder,
+        database_name=_default_database_name,
+        verbose=False
+        ):
+    ""
+    table_name='gas_LA_stacked_2005_21'
+    
+    fp_database=os.path.join(data_folder,database_name)
+    
+    where_clause=_get_where_clause_list(
+        {'year':year, 'la.code':la_code}
+        )
+        
+    query=f"SELECT * FROM {table_name} {where_clause};"
+    if verbose:
+        print(query)
+    
+    with sqlite3.connect(fp_database) as conn:
+        conn.row_factory = sqlite3.Row
+        c = conn.cursor()
+        result=[dict(x) for x in c.execute(query).fetchall()]
+        
+    return result
+
+
+def get_LSOA_elec_domestic(
+        year=None,
+        la_code=None,
+        msoa_code=None,
+        lsoa_code=None,
+        data_folder=_default_data_folder,
+        database_name=_default_database_name,
+        verbose=False
+        ):
+    ""
+    table_name='elec_domestic_LSOA_stacked_2005_21'
+    
+    fp_database=os.path.join(data_folder,database_name)
+    
+    where_clause=_get_where_clause_list(
+        {'YEAR':year, 'LACode':la_code, 'MSOACode':msoa_code,'LSOACode':lsoa_code}
+        )
+        
+    query=f"SELECT * FROM {table_name} {where_clause};"
+    if verbose:
+        print(query)
+    
+    with sqlite3.connect(fp_database) as conn:
+        conn.row_factory = sqlite3.Row
+        c = conn.cursor()
+        result=[dict(x) for x in c.execute(query).fetchall()]
+        
+    return result
+    
+
+def get_LSOA_gas_domestic(
+        year=None,
+        la_code=None,
+        msoa_code=None,
+        lsoa_code=None,
+        data_folder=_default_data_folder,
+        database_name=_default_database_name,
+        verbose=False
+        ):
+    ""
+    table_name='gas_domestic_LSOA_stacked_2005_21'
+    
+    fp_database=os.path.join(data_folder,database_name)
+    
+    where_clause=_get_where_clause_list(
+        {'year':year, 'la.code':la_code, 'msoa.code':msoa_code,'lsoa.code':lsoa_code}
+        )
+        
+    query=f"SELECT * FROM {table_name} {where_clause};"
+    if verbose:
+        print(query)
+    
+    with sqlite3.connect(fp_database) as conn:
+        conn.row_factory = sqlite3.Row
+        c = conn.cursor()
+        result=[dict(x) for x in c.execute(query).fetchall()]
+        
+    return result
+    
+
+def get_MSOA_elec_domestic(
+        year=None,
+        la_code=None,
+        msoa_code=None,
+        data_folder=_default_data_folder,
+        database_name=_default_database_name,
+        verbose=False
+        ):
+    ""
+    table_name='elec_domestic_MSOA_stacked_2005_21'
+    
+    fp_database=os.path.join(data_folder,database_name)
+    
+    where_clause=_get_where_clause_list(
+        {'YEAR':year, 'LACode':la_code, 'MSOAcode':msoa_code}
+        )
+        
+    query=f"SELECT * FROM {table_name} {where_clause};"
+    if verbose:
+        print(query)
+    
+    with sqlite3.connect(fp_database) as conn:
+        conn.row_factory = sqlite3.Row
+        c = conn.cursor()
+        result=[dict(x) for x in c.execute(query).fetchall()]
+        
+    return result
+    
+
+    
+
+
+def get_MSOA_gas_domestic(
+        year=None,
+        la_code=None,
+        msoa_code=None,
+        data_folder=_default_data_folder,
+        database_name=_default_database_name,
+        verbose=False
+        ):
+    ""
+    table_name='gas_domestic_MSOA_stacked_2005_21'
+    
+    fp_database=os.path.join(data_folder,database_name)
+    
+    where_clause=_get_where_clause_list(
+        {'year':year, 'la.code':la_code, 'msoa.code':msoa_code}
+        )
+        
+    query=f"SELECT * FROM {table_name} {where_clause};"
+    if verbose:
+        print(query)
+    
+    with sqlite3.connect(fp_database) as conn:
+        conn.row_factory = sqlite3.Row
+        c = conn.cursor()
+        result=[dict(x) for x in c.execute(query).fetchall()]
+        
+    return result
+    
+
+
+
 
 
 def get_postcode_gas(
