@@ -11,6 +11,7 @@ from snecs_functions import snecs_functions
 
 import datetime
 import json
+import os
 
 
 class TestDataFolder(unittest.TestCase):
@@ -19,7 +20,7 @@ class TestDataFolder(unittest.TestCase):
     def test_set_data_folder(self):
         ""
         
-        fp=r'C:\Users\cvskf\OneDrive - Loughborough University\_Git\building-energy\snecs_functions\snecs_functions\snecs_tables-metadata.json'
+        fp=os.path.join(os.pardir,'snecs_tables-metadata.json')
         
         snecs_functions.set_data_folder(
             metadata_document_location=fp,

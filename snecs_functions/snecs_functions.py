@@ -22,7 +22,7 @@ urllib.request.urlcleanup()
 #%% data folder
 
 def set_data_folder(
-        metadata_document_location=r'https://raw.githubusercontent.com/building-energy/snecs_functions/main/snecs_functions/snecs_tables-metadata.json', 
+        metadata_document_location=r'https://raw.githubusercontent.com/building-energy/snecs_functions/main/snecs_tables-metadata.json', 
         data_folder=_default_data_folder,
         overwrite_existing_files=False,
         database_name=_default_database_name,
