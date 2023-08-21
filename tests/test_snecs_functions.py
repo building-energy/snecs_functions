@@ -23,14 +23,31 @@ class TestDataFolder(unittest.TestCase):
         
         snecs_functions.set_data_folder(
             metadata_document_location=fp,
-            verbose=False,
-            #_reload_all_database_tables=True
+            verbose=True,
+            #overwrite_existing_files=True,
+            remove_existing_tables=True,
             )
 
+
+    def test__read_metadata_table_group_dict(self):
+        ""
+        
 
 
 class TestMainFunctions(unittest.TestCase):
     ""
+    
+    def test__convert_to_iterator(self):
+        ""
+        
+        
+    def test__get_where_clause_list(self):
+        ""
+        
+    
+    def test_get_government_office_region_elec(self):
+        ""
+    
     
     def test_get_government_office_region_gas(self):
         ""
@@ -60,6 +77,48 @@ class TestMainFunctions(unittest.TestCase):
               'median.kwh': 11800.46487}]
             )
     
+    
+    def test_get_local_authority_elec(self):
+        ""
+        
+        
+        
+    def test_get_local_authority_gas(self):
+        ""
+        
+        
+    def test_LSOA_elec_domestic(self):
+        ""
+        
+        
+    def test_get_LSOA_gas_domestic(self):
+        ""
+        
+        
+    def test_get_MSOA_elec_domestic(self):
+        ""
+        
+        
+    def test_get_MSOA_gas_domestic(self):
+        ""
+        
+    
+    def test_get_MSOA_elec_non_domestic(self):
+        ""
+        
+    def test_get_MSOA_gas_non_domestic(self):
+        ""
+        
+    def test_get_postcode_elec_all_meters(self):
+        ""
+        
+    def test_get_postcode_elec_economy_7(self):
+        ""
+        
+        
+    def test_get_postcode_elec_standard(self):
+        ""
+        
     
     def test_get_postcode_gas(self):
         ""

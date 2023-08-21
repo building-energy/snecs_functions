@@ -9,16 +9,7 @@ import urllib
 import urllib.request
 import json
 import os
-import zipfile
 import sqlite3
-import importlib.resources as pkg_resources
-import ogp_functions
-import subprocess
-from datetime import datetime
-import pandas as pd
-import csv
-from lxml import etree
-from bs4 import BeautifulSoup
 from csvw_functions import csvw_functions_extra
 
 
@@ -28,15 +19,15 @@ _default_database_name='snecs_data.sqlite'
 urllib.request.urlcleanup()
 
 
-
 #%% data folder
 
 def set_data_folder(
-        data_folder=_default_data_folder,
-        verbose=True,
         metadata_document_location=r'https://raw.githubusercontent.com/building-energy/snecs_functions/main/snecs_functions/snecs_tables-metadata.json', 
+        data_folder=_default_data_folder,
+        overwrite_existing_files=False,
         database_name=_default_database_name,
-        _reload_all_database_tables=False  # for testing
+        remove_existing_tables=False,
+        verbose=False,
         ):
     ""
     
@@ -45,6 +36,7 @@ def set_data_folder(
         csvw_functions_extra.download_table_group(
             metadata_document_location,
             data_folder=data_folder,
+            overwrite_existing_files=overwrite_existing_files,
             verbose=verbose
             )
 
@@ -55,8 +47,8 @@ def set_data_folder(
         metadata_document_location=fp_metadata,
         data_folder=data_folder,
         database_name=database_name,
-        verbose=verbose,
-        _reload_all_database_tables=_reload_all_database_tables
+        remove_existing_tables=remove_existing_tables,
+        verbose=verbose
         )
 
 
@@ -150,7 +142,6 @@ def get_government_office_region_elec(
     return result
 
 
-
 def get_government_office_region_gas(
         year=None,
         region_code=None,
@@ -179,7 +170,6 @@ def get_government_office_region_gas(
     return result
     
 
-
 def get_local_authority_elec(
         year=None,
         la_code=None,
@@ -206,7 +196,6 @@ def get_local_authority_elec(
         result=[dict(x) for x in c.execute(query).fetchall()]
         
     return result
-
 
 
 def get_local_authority_gas(
@@ -247,7 +236,7 @@ def get_LSOA_elec_domestic(
         verbose=False
         ):
     ""
-    table_name='elec_domestic_LSOA_stacked_2005_21'
+    table_name='elec_domestic_LSOA_stacked_2010_21'
     
     fp_database=os.path.join(data_folder,database_name)
     
@@ -277,7 +266,7 @@ def get_LSOA_gas_domestic(
         verbose=False
         ):
     ""
-    table_name='gas_domestic_LSOA_stacked_2005_21'
+    table_name='gas_domestic_LSOA_stacked_2010_21'
     
     fp_database=os.path.join(data_folder,database_name)
     
@@ -306,7 +295,7 @@ def get_MSOA_elec_domestic(
         verbose=False
         ):
     ""
-    table_name='elec_domestic_MSOA_stacked_2005_21'
+    table_name='elec_domestic_MSOA_stacked_2010_21'
     
     fp_database=os.path.join(data_folder,database_name)
     
@@ -326,9 +315,6 @@ def get_MSOA_elec_domestic(
     return result
     
 
-    
-
-
 def get_MSOA_gas_domestic(
         year=None,
         la_code=None,
@@ -338,7 +324,7 @@ def get_MSOA_gas_domestic(
         verbose=False
         ):
     ""
-    table_name='gas_domestic_MSOA_stacked_2005_21'
+    table_name='gas_domestic_MSOA_stacked_2010_21'
     
     fp_database=os.path.join(data_folder,database_name)
     
@@ -358,8 +344,149 @@ def get_MSOA_gas_domestic(
     return result
     
 
+def get_MSOA_elec_non_domestic(
+        year=None,
+        la_code=None,
+        msoa_code=None,
+        data_folder=_default_data_folder,
+        database_name=_default_database_name,
+        verbose=False
+        ):
+    ""
+    table_name='elec_non_domestic_MSOA_stacked_2010_21'
+    
+    fp_database=os.path.join(data_folder,database_name)
+    
+    where_clause=_get_where_clause_list(
+        {'YEAR':year, 'LACode':la_code, 'MSOAcode':msoa_code}
+        )
+        
+    query=f"SELECT * FROM {table_name} {where_clause};"
+    if verbose:
+        print(query)
+    
+    with sqlite3.connect(fp_database) as conn:
+        conn.row_factory = sqlite3.Row
+        c = conn.cursor()
+        result=[dict(x) for x in c.execute(query).fetchall()]
+        
+    return result
+     
+
+def get_MSOA_gas_non_domestic(
+        year=None,
+        la_code=None,
+        msoa_code=None,
+        data_folder=_default_data_folder,
+        database_name=_default_database_name,
+        verbose=False
+        ):
+    ""
+    table_name='gas_non_domestic_MSOA_stacked_2010_21'
+    
+    fp_database=os.path.join(data_folder,database_name)
+    
+    where_clause=_get_where_clause_list(
+        {'year':year, 'la.code':la_code, 'msoa.code':msoa_code}
+        )
+        
+    query=f"SELECT * FROM {table_name} {where_clause};"
+    if verbose:
+        print(query)
+    
+    with sqlite3.connect(fp_database) as conn:
+        conn.row_factory = sqlite3.Row
+        c = conn.cursor()
+        result=[dict(x) for x in c.execute(query).fetchall()]
+        
+    return result
+    
+
+def get_postcode_elec_all_meters(
+        year,
+        postcode=None,
+        outcode=None,
+        data_folder=_default_data_folder,
+        database_name=_default_database_name,
+        verbose=False
+        ):
+    ""
+    table_name=f'Postcode_level_all_meters_electricity_{year}'
+    
+    fp_database=os.path.join(data_folder,database_name)
+    
+    where_clause=_get_where_clause_list(
+        dict(Postcode=postcode, Outcode=outcode)
+        )
+        
+    query=f"SELECT * FROM {table_name} {where_clause};"
+    if verbose:
+        print(query)
+    
+    with sqlite3.connect(fp_database) as conn:
+        conn.row_factory = sqlite3.Row
+        c = conn.cursor()
+        result=[dict(x) for x in c.execute(query).fetchall()]
+        
+    return result
 
 
+def get_postcode_elec_economy_7(
+        year,
+        postcode=None,
+        outcode=None,
+        data_folder=_default_data_folder,
+        database_name=_default_database_name,
+        verbose=False
+        ):
+    ""
+    table_name=f'Postcode_level_economy_7_electricity_{year}'
+    
+    fp_database=os.path.join(data_folder,database_name)
+    
+    where_clause=_get_where_clause_list(
+        dict(Postcode=postcode, Outcode=outcode)
+        )
+        
+    query=f"SELECT * FROM {table_name} {where_clause};"
+    if verbose:
+        print(query)
+    
+    with sqlite3.connect(fp_database) as conn:
+        conn.row_factory = sqlite3.Row
+        c = conn.cursor()
+        result=[dict(x) for x in c.execute(query).fetchall()]
+        
+    return result
+        
+
+def get_postcode_elec_standard(
+        year,
+        postcode=None,
+        outcode=None,
+        data_folder=_default_data_folder,
+        database_name=_default_database_name,
+        verbose=False
+        ):
+    ""
+    table_name=f'Postcode_level_standard_electricity_{year}'
+    
+    fp_database=os.path.join(data_folder,database_name)
+    
+    where_clause=_get_where_clause_list(
+        dict(Postcode=postcode, Outcode=outcode)
+        )
+        
+    query=f"SELECT * FROM {table_name} {where_clause};"
+    if verbose:
+        print(query)
+    
+    with sqlite3.connect(fp_database) as conn:
+        conn.row_factory = sqlite3.Row
+        c = conn.cursor()
+        result=[dict(x) for x in c.execute(query).fetchall()]
+        
+    return result
 
 
 def get_postcode_gas(
@@ -376,10 +503,7 @@ def get_postcode_gas(
     fp_database=os.path.join(data_folder,database_name)
     
     where_clause=_get_where_clause_list(
-        dict(
-            Postcode=postcode,
-            Outcode=outcode
-            )
+        dict(Postcode=postcode, Outcode=outcode)
         )
         
     query=f"SELECT * FROM {table_name} {where_clause};"
