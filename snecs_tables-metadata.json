@@ -6,15 +6,15 @@
         {
             "@type": "Table",
             "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1126255/gas_GOR_stacked_2005-21.csv",
-            "https://purl.org/berg/csvw_functions/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1126255/gas_GOR_stacked_2005-21.csv", 
-            "https://purl.org/berg/csvw_functions/vocab/csv_file_name": "gas_GOR_stacked_2005_21.csv",
-            "https://purl.org/berg/csvw_functions/vocab/sql_table_name": "gas_GOR_stacked_2005_21",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1126255/gas_GOR_stacked_2005-21.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "gas_GOR_stacked_2005_21.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "gas_GOR_stacked_2005_21",
             "rdfs:seeAlso": "https://www.gov.uk/government/statistical-data-sets/stacked-gas-consumption-statistics-data",  
             "tableSchema": {
                 "primaryKey": ["year","region.code"],
                 "columns": [
-                    {"name": "year", "datatype": "integer", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
-                    {"name": "region.code", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "year", "datatype": "integer", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "region.code", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
                     {"name": "region", "datatype": "string"},
                     {"name": "domestic.meters", "datatype": "decimal"},
                     {"name": "non.domestic.meters", "datatype": "decimal"},
@@ -34,15 +34,15 @@
         {
             "@type": "Table",
             "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1126247/elec_GOR_stacked_2005-21.csv",
-            "https://purl.org/berg/csvw_functions/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1126247/elec_GOR_stacked_2005-21.csv", 
-            "https://purl.org/berg/csvw_functions/vocab/csv_file_name": "elec_GOR_stacked_2005_21.csv",
-            "https://purl.org/berg/csvw_functions/vocab/sql_table_name": "elec_GOR_stacked_2005_21",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1126247/elec_GOR_stacked_2005-21.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "elec_GOR_stacked_2005_21.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "elec_GOR_stacked_2005_21",
             "rdfs:seeAlso": "https://www.gov.uk/government/statistical-data-sets/stacked-electricity-consumption-statistics-data",  
             "tableSchema": {
                 "primaryKey": ["year","gor"],
                 "columns": [
-                    {"name": "year", "datatype": "integer", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
-                    {"name": "gor", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "year", "datatype": "integer", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "gor", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
                     {"name": "region", "datatype": "string"},
                     {"name": "e7_meters", "datatype": "decimal"},
                     {"name": "standard_meters", "datatype": "decimal"},
@@ -71,17 +71,17 @@
         {
             "@type": "Table",
             "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1126256/gas_LA_stacked_2005-21.csv",
-            "https://purl.org/berg/csvw_functions/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1126256/gas_LA_stacked_2005-21.csv", 
-            "https://purl.org/berg/csvw_functions/vocab/csv_file_name": "gas_LA_stacked_2005_21.csv",
-            "https://purl.org/berg/csvw_functions/vocab/sql_table_name": "gas_LA_stacked_2005_21",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1126256/gas_LA_stacked_2005-21.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "gas_LA_stacked_2005_21.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "gas_LA_stacked_2005_21",
             "rdfs:seeAlso": "https://www.gov.uk/government/statistical-data-sets/stacked-gas-consumption-statistics-data",  
             "dialect": {"encoding": "ansi_x3.4-1968"},
             "tableSchema": {
                 "primaryKey": ["Year","la.code","lau1"],
                 "columns": [
-                    {"name": "Year", "datatype": "integer", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
-                    {"name": "la.code", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
-                    {"name": "lau1", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "Year", "datatype": "integer", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "la.code", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "lau1", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
                     {"name": "region", "datatype": "string"},
                     {"name": "la.name", "datatype": "string"},
                     {"name": "domestic.meters", "datatype": "decimal"},
@@ -102,18 +102,18 @@
         {
             "@type": "Table",
             "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1126248/elec_LA_stacked_2005-21.csv",
-            "https://purl.org/berg/csvw_functions/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1126248/elec_LA_stacked_2005-21.csv", 
-            "https://purl.org/berg/csvw_functions/vocab/csv_file_name": "elec_LA_stacked_2005_21.csv",
-            "https://purl.org/berg/csvw_functions/vocab/sql_table_name": "elec_LA_stacked_2005_21",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1126248/elec_LA_stacked_2005-21.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "elec_LA_stacked_2005_21.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "elec_LA_stacked_2005_21",
             "rdfs:seeAlso": "https://www.gov.uk/government/statistical-data-sets/stacked-electricity-consumption-statistics-data",  
             "dialect": {"encoding": "ansi_x3.4-1968"},
             "tableSchema": {
                 "primaryKey": ["year","la_code","lau1"],
                 "columns": [
-                    {"name": "year", "datatype": "integer", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "year", "datatype": "integer", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
                     {"name": "region", "datatype": "string"},
-                    {"name": "la_code", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
-                    {"name": "lau1", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "la_code", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "lau1", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
                     {"name": "la_name", "datatype": "string"},
                     {"name": "e7_meters", "datatype": "decimal"},
                     {"name": "standard_meters", "datatype": "decimal"},
@@ -142,17 +142,17 @@
         {
             "@type": "Table",
             "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1126259/gas_domestic_MSOA_stacked_2010-21.csv",
-            "https://purl.org/berg/csvw_functions/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1126259/gas_domestic_MSOA_stacked_2010-21.csv", 
-            "https://purl.org/berg/csvw_functions/vocab/csv_file_name": "gas_domestic_MSOA_stacked_2010_21.csv",
-            "https://purl.org/berg/csvw_functions/vocab/sql_table_name": "gas_domestic_MSOA_stacked_2010_21",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1126259/gas_domestic_MSOA_stacked_2010-21.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "gas_domestic_MSOA_stacked_2010_21.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "gas_domestic_MSOA_stacked_2010_21",
             "rdfs:seeAlso": "https://www.gov.uk/government/statistical-data-sets/stacked-gas-consumption-statistics-data",  
             "tableSchema": {
                 "primaryKey": ["Year","msoa.code"],
                 "columns": [
-                    {"name": "Year", "datatype": "integer", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
-                    {"name": "la.code", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "Year", "datatype": "integer", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "la.code", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
                     {"name": "la.name", "datatype": "string"},
-                    {"name": "msoa.code", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "msoa.code", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
                     {"name": "msoa.name", "datatype": "string"},
                     {"name": "total.meters", "datatype": "integer"},
                     {"name": "total.kwh", "datatype": "decimal"},
@@ -164,17 +164,17 @@
         {
             "@type": "Table",
             "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1126251/elec_domestic_MSOA_stacked_2010-21.csv",
-            "https://purl.org/berg/csvw_functions/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1126251/elec_domestic_MSOA_stacked_2010-21.csv", 
-            "https://purl.org/berg/csvw_functions/vocab/csv_file_name": "elec_domestic_MSOA_stacked_2010_21.csv",
-            "https://purl.org/berg/csvw_functions/vocab/sql_table_name": "elec_domestic_MSOA_stacked_2010_21",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1126251/elec_domestic_MSOA_stacked_2010-21.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "elec_domestic_MSOA_stacked_2010_21.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "elec_domestic_MSOA_stacked_2010_21",
             "rdfs:seeAlso": "https://www.gov.uk/government/statistical-data-sets/stacked-electricity-consumption-statistics-data",  
             "tableSchema": {
                 "primaryKey": ["YEAR","MSOACode"],
                 "columns": [
-                    {"name": "YEAR", "datatype": "integer", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
-                    {"name": "LACode", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "YEAR", "datatype": "integer", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "LACode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
                     {"name": "LAName", "datatype": "string"},
-                    {"name": "MSOACode", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "MSOACode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
                     {"name": "MSOAName", "datatype": "string"},
                     {"name": "METERS", "datatype": "integer"},
                     {"name": "KWH", "datatype": "decimal"},
@@ -186,20 +186,20 @@
         {
             "@type": "Table",
             "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1126258/gas_domestic_LSOA_stacked_2010-21.csv",
-            "https://purl.org/berg/csvw_functions/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1126258/gas_domestic_LSOA_stacked_2010-21.csv", 
-            "https://purl.org/berg/csvw_functions/vocab/csv_file_name": "gas_domestic_LSOA_stacked_2010_21.csv",
-            "https://purl.org/berg/csvw_functions/vocab/sql_table_name": "gas_domestic_LSOA_stacked_2010_21",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1126258/gas_domestic_LSOA_stacked_2010-21.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "gas_domestic_LSOA_stacked_2010_21.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "gas_domestic_LSOA_stacked_2010_21",
             "rdfs:seeAlso": "https://www.gov.uk/government/statistical-data-sets/stacked-gas-consumption-statistics-data",  
             "tableSchema": {
                 "primaryKey":["year","lsoa.code"],
                 "columns": [
-                    {"name": "year", "datatype": "integer", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "year", "datatype": "integer", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
                     {"name": "la.name", "datatype": "string"},
-                    {"name": "la.code", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "la.code", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
                     {"name": "msoa.name", "datatype": "string"},
-                    {"name": "msoa.code", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "msoa.code", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
                     {"name": "lsoa.name", "datatype": "string"},
-                    {"name": "lsoa.code", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "lsoa.code", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
                     {"name": "total.meters", "datatype": "integer"},
                     {"name": "total.kwh", "datatype": "decimal"},
                     {"name": "mean.kwh", "datatype": "decimal"},
@@ -210,19 +210,19 @@
         {
             "@type": "Table",
             "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1126250/elec_domestic_LSOA_stacked_2010-21.csv",
-            "https://purl.org/berg/csvw_functions/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1126250/elec_domestic_LSOA_stacked_2010-21.csv", 
-            "https://purl.org/berg/csvw_functions/vocab/csv_file_name": "elec_domestic_LSOA_stacked_2010_21.csv",
-            "https://purl.org/berg/csvw_functions/vocab/sql_table_name": "elec_domestic_LSOA_stacked_2010_21",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1126250/elec_domestic_LSOA_stacked_2010-21.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "elec_domestic_LSOA_stacked_2010_21.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "elec_domestic_LSOA_stacked_2010_21",
             "rdfs:seeAlso": "https://www.gov.uk/government/statistical-data-sets/stacked-electricity-consumption-statistics-data",  
             "tableSchema": {
                 "primaryKey":["YEAR","LSOACode"],
                 "columns": [
-                    {"name": "YEAR", "datatype": "integer", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
-                    {"name": "LACode", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "YEAR", "datatype": "integer", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "LACode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
                     {"name": "LAName", "datatype": "string"},
-                    {"name": "MSOACode", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "MSOACode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
                     {"name": "MSOAName", "datatype": "string"},
-                    {"name": "LSOACode", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "LSOACode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
                     {"name": "LSOAName", "datatype": "string"},
                     {"name": "METERS", "datatype": "integer"},
                     {"name": "KWH", "datatype": "decimal"},
@@ -234,17 +234,17 @@
         {
             "@type": "Table",
             "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1126260/gas_non_domestic_MSOA_stacked_2010-21.csv",
-            "https://purl.org/berg/csvw_functions/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1126260/gas_non_domestic_MSOA_stacked_2010-21.csv", 
-            "https://purl.org/berg/csvw_functions/vocab/csv_file_name": "gas_non_domestic_MSOA_stacked_2010_21.csv",
-            "https://purl.org/berg/csvw_functions/vocab/sql_table_name": "gas_non_domestic_MSOA_stacked_2010_21",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1126260/gas_non_domestic_MSOA_stacked_2010-21.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "gas_non_domestic_MSOA_stacked_2010_21.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "gas_non_domestic_MSOA_stacked_2010_21",
             "rdfs:seeAlso": "https://www.gov.uk/government/statistical-data-sets/stacked-gas-consumption-statistics-data",  
             "tableSchema": {
                 "primaryKey":["year","msoa.code"],
                 "columns": [
-                    {"name": "year", "datatype": "integer", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
-                    {"name": "la.code", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "year", "datatype": "integer", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "la.code", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
                     {"name": "la.name", "datatype": "string"},
-                    {"name": "msoa.code", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "msoa.code", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
                     {"name": "msoa.name", "datatype": "string"},
                     {"name": "total.meters", "datatype": "integer"},
                     {"name": "total.kwh", "datatype": "decimal"},
@@ -256,17 +256,17 @@
         {
             "@type": "Table",
             "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1126252/elec_non_domestic_MSOA_stacked_2010-21.csv",
-            "https://purl.org/berg/csvw_functions/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1126252/elec_non_domestic_MSOA_stacked_2010-21.csv", 
-            "https://purl.org/berg/csvw_functions/vocab/csv_file_name": "elec_non_domestic_MSOA_stacked_2010_21.csv",
-            "https://purl.org/berg/csvw_functions/vocab/sql_table_name": "elec_non_domestic_MSOA_stacked_2010_21",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1126252/elec_non_domestic_MSOA_stacked_2010-21.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "elec_non_domestic_MSOA_stacked_2010_21.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "elec_non_domestic_MSOA_stacked_2010_21",
             "rdfs:seeAlso": "https://www.gov.uk/government/statistical-data-sets/stacked-electricity-consumption-statistics-data",  
             "tableSchema": {
                 "primaryKey":["YEAR", "MSOACode"],
                 "columns": [
-                    {"name": "YEAR", "datatype": "integer", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
-                    {"name": "LACode", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "YEAR", "datatype": "integer", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "LACode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
                     {"name": "LAName", "datatype": "string"},
-                    {"name": "MSOACode", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "MSOACode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
                     {"name": "MSOAName", "datatype": "string"},
                     {"name": "METERS", "datatype": "integer"},
                     {"name": "KWH", "datatype": "decimal"},
@@ -278,15 +278,15 @@
         {
             "@type": "Table",
             "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1131256/Postcode_level_gas_2021.csv",
-            "https://purl.org/berg/csvw_functions/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1131256/Postcode_level_gas_2021.csv", 
-            "https://purl.org/berg/csvw_functions/vocab/csv_file_name": "Postcode_level_gas_2021.csv",
-            "https://purl.org/berg/csvw_functions/vocab/sql_table_name": "Postcode_level_gas_2021",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1131256/Postcode_level_gas_2021.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "Postcode_level_gas_2021.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "Postcode_level_gas_2021",
             "rdfs:seeAlso": "https://www.gov.uk/government/statistics/postcode-level-gas-statistics-2021-experimental",  
             "tableSchema": {
                 "primaryKey":["Outcode","Postcode"],
                 "columns": [
-                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
-                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
                     {"name": "Num_meters", "datatype": "integer"},
                     {"name": "Total_cons_kwh", "datatype": "decimal"},
                     {"name": "Mean_cons_kwh", "datatype": "decimal"},
@@ -297,15 +297,15 @@
         {
             "@type": "Table",
             "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1131250/Postcode_level_all_meters_electricity_2021.csv",
-            "https://purl.org/berg/csvw_functions/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1131250/Postcode_level_all_meters_electricity_2021.csv", 
-            "https://purl.org/berg/csvw_functions/vocab/csv_file_name": "Postcode_level_all_meters_electricity_2021.csv",
-            "https://purl.org/berg/csvw_functions/vocab/sql_table_name": "Postcode_level_all_meters_electricity_2021",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1131250/Postcode_level_all_meters_electricity_2021.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "Postcode_level_all_meters_electricity_2021.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "Postcode_level_all_meters_electricity_2021",
             "rdfs:seeAlso": "https://www.gov.uk/government/statistics/postcode-level-electricity-statistics-2021-experimental",  
             "tableSchema": {
                 "primaryKey":["Outcode","Postcode"],
                 "columns": [
-                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
-                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
                     {"name": "Num_meters", "datatype": "integer"},
                     {"name": "Total_cons_kwh", "datatype": "decimal"},
                     {"name": "Mean_cons_kwh", "datatype": "decimal"},
@@ -316,15 +316,15 @@
         {
             "@type": "Table",
             "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1131253/Postcode_Level_economy_7_electricity_2021.csv",
-            "https://purl.org/berg/csvw_functions/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1131253/Postcode_Level_economy_7_electricity_2021.csv", 
-            "https://purl.org/berg/csvw_functions/vocab/csv_file_name": "Postcode_level_economy_7_electricity_2021.csv",
-            "https://purl.org/berg/csvw_functions/vocab/sql_table_name": "Postcode_level_economy_7_electricity_2021",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1131253/Postcode_Level_economy_7_electricity_2021.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "Postcode_level_economy_7_electricity_2021.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "Postcode_level_economy_7_electricity_2021",
             "rdfs:seeAlso": "https://www.gov.uk/government/statistics/postcode-level-electricity-statistics-2021-experimental",  
             "tableSchema": {
                 "primaryKey":["Outcode","Postcode"],
                 "columns": [
-                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
-                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
                     {"name": "Num_meters", "datatype": "integer"},
                     {"name": "Total_cons_kwh", "datatype": "decimal"},
                     {"name": "Mean_cons_kwh", "datatype": "decimal"},
@@ -335,15 +335,15 @@
         {
             "@type": "Table",
             "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1131251/Postcode_level_standard_electricity_2021_A_to_K.csv",
-            "https://purl.org/berg/csvw_functions/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1131251/Postcode_level_standard_electricity_2021_A_to_K.csv", 
-            "https://purl.org/berg/csvw_functions/vocab/csv_file_name": "Postcode_level_standard_electricity_2021_A_to_K.csv",
-            "https://purl.org/berg/csvw_functions/vocab/sql_table_name": "Postcode_level_standard_electricity_2021",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1131251/Postcode_level_standard_electricity_2021_A_to_K.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "Postcode_level_standard_electricity_2021_A_to_K.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "Postcode_level_standard_electricity_2021",
             "rdfs:seeAlso": "https://www.gov.uk/government/statistics/postcode-level-electricity-statistics-2021-experimental",  
             "tableSchema": {
                 "primaryKey":["Outcode","Postcode"],
                 "columns": [
-                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
-                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
                     {"name": "Num_meters", "datatype": "integer"},
                     {"name": "Total_cons_kwh", "datatype": "decimal"},
                     {"name": "Mean_cons_kwh", "datatype": "decimal"},
@@ -354,15 +354,15 @@
         {
             "@type": "Table",
             "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1154243/Postcode_level_standard_electricity_2021_K_to_Z.csv",
-            "https://purl.org/berg/csvw_functions/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1154243/Postcode_level_standard_electricity_2021_K_to_Z.csv", 
-            "https://purl.org/berg/csvw_functions/vocab/csv_file_name": "Postcode_level_standard_electricity_2021_K_to_Z.csv",
-            "https://purl.org/berg/csvw_functions/vocab/sql_table_name": "Postcode_level_standard_electricity_2021",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1154243/Postcode_level_standard_electricity_2021_K_to_Z.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "Postcode_level_standard_electricity_2021_K_to_Z.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "Postcode_level_standard_electricity_2021",
             "rdfs:seeAlso": "https://www.gov.uk/government/statistics/postcode-level-electricity-statistics-2021-experimental",  
             "tableSchema": {
                 "primaryKey":["Outcode","Postcode"],
                 "columns": [
-                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
-                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
                     {"name": "Num_meters", "datatype": "integer"},
                     {"name": "Total_cons_kwh", "datatype": "decimal"},
                     {"name": "Mean_cons_kwh", "datatype": "decimal"},
@@ -373,15 +373,91 @@
         {
             "@type": "Table",
             "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1131391/Postcode_level_gas_2020.csv",
-            "https://purl.org/berg/csvw_functions/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1131391/Postcode_level_gas_2020.csv", 
-            "https://purl.org/berg/csvw_functions/vocab/csv_file_name": "Postcode_level_gas_2020.csv",
-            "https://purl.org/berg/csvw_functions/vocab/sql_table_name": "Postcode_level_gas_2020",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1131391/Postcode_level_gas_2020.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "Postcode_level_gas_2020.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "Postcode_level_gas_2020",
             "rdfs:seeAlso": "https://www.gov.uk/government/statistics/postcode-level-gas-statistics-2020-experimental",  
             "tableSchema": {
                 "primaryKey":["Outcode","Postcode"],
                 "columns": [
-                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
-                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Num_meters", "datatype": "integer"},
+                    {"name": "Total_cons_kwh", "datatype": "decimal"},
+                    {"name": "Mean_cons_kwh", "datatype": "decimal"},
+                    {"name": "Median_cons_kwh", "datatype": "decimal"}
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "https://assets.publishing.service.gov.uk/media/63d0e8ced3bf7f3c44bcd6a5/Postcode_level_all_meters_electricity_2020.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/media/63d0e8ced3bf7f3c44bcd6a5/Postcode_level_all_meters_electricity_2020.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "Postcode_level_all_meters_electricity_2020.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "Postcode_level_all_meters_electricity_2020",
+            "rdfs:seeAlso": "https://www.gov.uk/government/statistics/postcode-level-electricity-statistics-2020-experimental",  
+            "tableSchema": {
+                "primaryKey":["Outcode","Postcode"],
+                "columns": [
+                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Num_meters", "datatype": "integer"},
+                    {"name": "Total_cons_kwh", "datatype": "decimal"},
+                    {"name": "Mean_cons_kwh", "datatype": "decimal"},
+                    {"name": "Median_cons_kwh", "datatype": "decimal"}
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "https://assets.publishing.service.gov.uk/media/63d0e9d5d3bf7f3c4b05d2b7/Postcode_Level_economy_7_electricity_2020.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/media/63d0e9d5d3bf7f3c4b05d2b7/Postcode_Level_economy_7_electricity_2020.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "Postcode_level_economy_7_electricity_2020.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "Postcode_level_economy_7_electricity_2020",
+            "rdfs:seeAlso": "https://www.gov.uk/government/statistics/postcode-level-electricity-statistics-2020-experimental",  
+            "tableSchema": {
+                "primaryKey":["Outcode","Postcode"],
+                "columns": [
+                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Num_meters", "datatype": "integer"},
+                    {"name": "Total_cons_kwh", "datatype": "decimal"},
+                    {"name": "Mean_cons_kwh", "datatype": "decimal"},
+                    {"name": "Median_cons_kwh", "datatype": "decimal"}
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "https://assets.publishing.service.gov.uk/media/63d0e993e90e071bafbab422/Postcode_level_standard_electricity_2020_A_to_K.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/media/63d0e993e90e071bafbab422/Postcode_level_standard_electricity_2020_A_to_K.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "Postcode_level_standard_electricity_2020_A_to_K.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "Postcode_level_standard_electricity_2020",
+            "rdfs:seeAlso": "https://www.gov.uk/government/statistics/postcode-level-electricity-statistics-2020-experimental",  
+            "tableSchema": {
+                "primaryKey":["Outcode","Postcode"],
+                "columns": [
+                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Num_meters", "datatype": "integer"},
+                    {"name": "Total_cons_kwh", "datatype": "decimal"},
+                    {"name": "Mean_cons_kwh", "datatype": "decimal"},
+                    {"name": "Median_cons_kwh", "datatype": "decimal"}
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "https://assets.publishing.service.gov.uk/media/63d0e9b7d3bf7f3c46fe5fe7/Postcode_level_standard_electricity_2020_K_to_Z.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/media/63d0e9b7d3bf7f3c46fe5fe7/Postcode_level_standard_electricity_2020_K_to_Z.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "Postcode_level_standard_electricity_2020_K_to_Z.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "Postcode_level_standard_electricity_2020",
+            "rdfs:seeAlso": "https://www.gov.uk/government/statistics/postcode-level-electricity-statistics-2020-experimental",  
+            "tableSchema": {
+                "primaryKey":["Outcode","Postcode"],
+                "columns": [
+                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
                     {"name": "Num_meters", "datatype": "integer"},
                     {"name": "Total_cons_kwh", "datatype": "decimal"},
                     {"name": "Mean_cons_kwh", "datatype": "decimal"},
@@ -392,15 +468,91 @@
         {
             "@type": "Table",
             "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1131396/Postcode_level_gas_2019.csv",
-            "https://purl.org/berg/csvw_functions/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1131396/Postcode_level_gas_2019.csv", 
-            "https://purl.org/berg/csvw_functions/vocab/csv_file_name": "Postcode_level_gas_2019.csv",
-            "https://purl.org/berg/csvw_functions/vocab/sql_table_name": "Postcode_level_gas_2019",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1131396/Postcode_level_gas_2019.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "Postcode_level_gas_2019.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "Postcode_level_gas_2019",
             "rdfs:seeAlso": "https://www.gov.uk/government/statistics/postcode-level-gas-statistics-2019-experimental",  
             "tableSchema": {
                 "primaryKey":["Outcode","Postcode"],
                 "columns": [
-                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
-                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Num_meters", "datatype": "integer"},
+                    {"name": "Total_cons_kwh", "datatype": "decimal"},
+                    {"name": "Mean_cons_kwh", "datatype": "decimal"},
+                    {"name": "Median_cons_kwh", "datatype": "decimal"}
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "https://assets.publishing.service.gov.uk/media/63d0eb3e8fa8f53fe41ff69c/Postcode_level_all_meters_electricity_2019.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/media/63d0eb3e8fa8f53fe41ff69c/Postcode_level_all_meters_electricity_2019.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "Postcode_level_all_meters_electricity_2019.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "Postcode_level_all_meters_electricity_2019",
+            "rdfs:seeAlso": "https://www.gov.uk/government/statistics/postcode-level-electricity-statistics-2019-experimental",  
+            "tableSchema": {
+                "primaryKey":["Outcode","Postcode"],
+                "columns": [
+                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Num_meters", "datatype": "integer"},
+                    {"name": "Total_cons_kwh", "datatype": "decimal"},
+                    {"name": "Mean_cons_kwh", "datatype": "decimal"},
+                    {"name": "Median_cons_kwh", "datatype": "decimal"}
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "https://assets.publishing.service.gov.uk/media/63d0eb20e90e071baeb3a791/Postcode_level_economy_7_electricity_2019.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/media/63d0eb20e90e071baeb3a791/Postcode_level_economy_7_electricity_2019.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "Postcode_level_economy_7_electricity_2019.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "Postcode_level_economy_7_electricity_2019",
+            "rdfs:seeAlso": "https://www.gov.uk/government/statistics/postcode-level-electricity-statistics-2019-experimental",  
+            "tableSchema": {
+                "primaryKey":["Outcode","Postcode"],
+                "columns": [
+                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Num_meters", "datatype": "integer"},
+                    {"name": "Total_cons_kwh", "datatype": "decimal"},
+                    {"name": "Mean_cons_kwh", "datatype": "decimal"},
+                    {"name": "Median_cons_kwh", "datatype": "decimal"}
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "https://assets.publishing.service.gov.uk/media/63d0eae2e90e071baad51282/Postcode_level_standard_electricity_2019_A_to_K.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/media/63d0eae2e90e071baad51282/Postcode_level_standard_electricity_2019_A_to_K.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "Postcode_level_standard_electricity_2019_A_to_K.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "Postcode_level_standard_electricity_2019",
+            "rdfs:seeAlso": "https://www.gov.uk/government/statistics/postcode-level-electricity-statistics-2019-experimental",  
+            "tableSchema": {
+                "primaryKey":["Outcode","Postcode"],
+                "columns": [
+                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Num_meters", "datatype": "integer"},
+                    {"name": "Total_cons_kwh", "datatype": "decimal"},
+                    {"name": "Mean_cons_kwh", "datatype": "decimal"},
+                    {"name": "Median_cons_kwh", "datatype": "decimal"}
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "https://assets.publishing.service.gov.uk/media/63d0eaffe90e071ba274698c/Postcode_level_standard_electricity_2019_K_to_Z.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/media/63d0eaffe90e071ba274698c/Postcode_level_standard_electricity_2019_K_to_Z.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "Postcode_level_standard_electricity_2019_K_to_Z.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "Postcode_level_standard_electricity_2019",
+            "rdfs:seeAlso": "https://www.gov.uk/government/statistics/postcode-level-electricity-statistics-2019-experimental",  
+            "tableSchema": {
+                "primaryKey":["Outcode","Postcode"],
+                "columns": [
+                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
                     {"name": "Num_meters", "datatype": "integer"},
                     {"name": "Total_cons_kwh", "datatype": "decimal"},
                     {"name": "Mean_cons_kwh", "datatype": "decimal"},
@@ -411,15 +563,91 @@
         {
             "@type": "Table",
             "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1131398/Postcode_level_gas_2018.csv",
-            "https://purl.org/berg/csvw_functions/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1131398/Postcode_level_gas_2018.csv", 
-            "https://purl.org/berg/csvw_functions/vocab/csv_file_name": "Postcode_level_gas_2018.csv",
-            "https://purl.org/berg/csvw_functions/vocab/sql_table_name": "Postcode_level_gas_2018",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1131398/Postcode_level_gas_2018.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "Postcode_level_gas_2018.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "Postcode_level_gas_2018",
             "rdfs:seeAlso": "https://www.gov.uk/government/statistics/postcode-level-gas-statistics-2018-experimental",  
             "tableSchema": {
                 "primaryKey":["Outcode","Postcode"],
                 "columns": [
-                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
-                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Num_meters", "datatype": "integer"},
+                    {"name": "Total_cons_kwh", "datatype": "decimal"},
+                    {"name": "Mean_cons_kwh", "datatype": "decimal"},
+                    {"name": "Median_cons_kwh", "datatype": "decimal"}
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "https://assets.publishing.service.gov.uk/media/63d0ec5e8fa8f53fead8ee52/Postcode_level_all_meters_electricity_2018.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/media/63d0ec5e8fa8f53fead8ee52/Postcode_level_all_meters_electricity_2018.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "Postcode_level_all_meters_electricity_2018.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "Postcode_level_all_meters_electricity_2018",
+            "rdfs:seeAlso": "https://www.gov.uk/government/statistics/postcode-level-electricity-statistics-2018-experimental",  
+            "tableSchema": {
+                "primaryKey":["Outcode","Postcode"],
+                "columns": [
+                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Num_meters", "datatype": "integer"},
+                    {"name": "Total_cons_kwh", "datatype": "decimal"},
+                    {"name": "Mean_cons_kwh", "datatype": "decimal"},
+                    {"name": "Median_cons_kwh", "datatype": "decimal"}
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "https://assets.publishing.service.gov.uk/media/63d0ec48e90e071baeb3a792/Postcode_level_economy_7_electricity_2018.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/media/63d0ec48e90e071baeb3a792/Postcode_level_economy_7_electricity_2018.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "Postcode_level_economy_7_electricity_2018.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "Postcode_level_economy_7_electricity_2018",
+            "rdfs:seeAlso": "https://www.gov.uk/government/statistics/postcode-level-electricity-statistics-2018-experimental",  
+            "tableSchema": {
+                "primaryKey":["Outcode","Postcode"],
+                "columns": [
+                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Num_meters", "datatype": "integer"},
+                    {"name": "Total_cons_kwh", "datatype": "decimal"},
+                    {"name": "Mean_cons_kwh", "datatype": "decimal"},
+                    {"name": "Median_cons_kwh", "datatype": "decimal"}
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "https://assets.publishing.service.gov.uk/media/63d0ec138fa8f53fe508fc1f/Postcode_level_standard_electricity_2018_A_to_K.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/media/63d0ec138fa8f53fe508fc1f/Postcode_level_standard_electricity_2018_A_to_K.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "Postcode_level_standard_electricity_2018_A_to_K.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "Postcode_level_standard_electricity_2018",
+            "rdfs:seeAlso": "https://www.gov.uk/government/statistics/postcode-level-electricity-statistics-2018-experimental",  
+            "tableSchema": {
+                "primaryKey":["Outcode","Postcode"],
+                "columns": [
+                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Num_meters", "datatype": "integer"},
+                    {"name": "Total_cons_kwh", "datatype": "decimal"},
+                    {"name": "Mean_cons_kwh", "datatype": "decimal"},
+                    {"name": "Median_cons_kwh", "datatype": "decimal"}
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "https://assets.publishing.service.gov.uk/media/63d0ec328fa8f53fe9e3d1c9/Postcode_level_standard_electricity_2018_K_to_Z.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/media/63d0ec328fa8f53fe9e3d1c9/Postcode_level_standard_electricity_2018_K_to_Z.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "Postcode_level_standard_electricity_2018_K_to_Z.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "Postcode_level_standard_electricity_2018",
+            "rdfs:seeAlso": "https://www.gov.uk/government/statistics/postcode-level-electricity-statistics-2018-experimental",  
+            "tableSchema": {
+                "primaryKey":["Outcode","Postcode"],
+                "columns": [
+                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
                     {"name": "Num_meters", "datatype": "integer"},
                     {"name": "Total_cons_kwh", "datatype": "decimal"},
                     {"name": "Mean_cons_kwh", "datatype": "decimal"},
@@ -430,15 +658,91 @@
         {
             "@type": "Table",
             "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1131402/Postcode_level_gas_2017.csv",
-            "https://purl.org/berg/csvw_functions/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1131402/Postcode_level_gas_2017.csv", 
-            "https://purl.org/berg/csvw_functions/vocab/csv_file_name": "Postcode_level_gas_2017.csv",
-            "https://purl.org/berg/csvw_functions/vocab/sql_table_name": "Postcode_level_gas_2017",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1131402/Postcode_level_gas_2017.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "Postcode_level_gas_2017.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "Postcode_level_gas_2017",
             "rdfs:seeAlso": "https://www.gov.uk/government/statistics/postcode-level-gas-statistics-2017-experimental",  
             "tableSchema": {
                 "primaryKey":["Outcode","Postcode"],
                 "columns": [
-                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
-                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Num_meters", "datatype": "integer"},
+                    {"name": "Total_cons_kwh", "datatype": "decimal"},
+                    {"name": "Mean_cons_kwh", "datatype": "decimal"},
+                    {"name": "Median_cons_kwh", "datatype": "decimal"}
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "https://assets.publishing.service.gov.uk/media/63d0ee38d3bf7f3c40d67260/Postcode_level_all_meters_electricity_2017.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/media/63d0ee38d3bf7f3c40d67260/Postcode_level_all_meters_electricity_2017.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "Postcode_level_all_meters_electricity_2017.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "Postcode_level_all_meters_electricity_2017",
+            "rdfs:seeAlso": "https://www.gov.uk/government/statistics/postcode-level-electricity-statistics-2017-experimental",  
+            "tableSchema": {
+                "primaryKey":["Outcode","Postcode"],
+                "columns": [
+                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Num_meters", "datatype": "integer"},
+                    {"name": "Total_cons_kwh", "datatype": "decimal"},
+                    {"name": "Mean_cons_kwh", "datatype": "decimal"},
+                    {"name": "Median_cons_kwh", "datatype": "decimal"}
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "https://assets.publishing.service.gov.uk/media/63d0ee18d3bf7f3c46fe5fe8/Postcode_level_economy_7_electricity_2017.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/media/63d0ee18d3bf7f3c46fe5fe8/Postcode_level_economy_7_electricity_2017.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "Postcode_level_economy_7_electricity_2017.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "Postcode_level_economy_7_electricity_2017",
+            "rdfs:seeAlso": "https://www.gov.uk/government/statistics/postcode-level-electricity-statistics-2017-experimental",  
+            "tableSchema": {
+                "primaryKey":["Outcode","Postcode"],
+                "columns": [
+                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Num_meters", "datatype": "integer"},
+                    {"name": "Total_cons_kwh", "datatype": "decimal"},
+                    {"name": "Mean_cons_kwh", "datatype": "decimal"},
+                    {"name": "Median_cons_kwh", "datatype": "decimal"}
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "https://assets.publishing.service.gov.uk/media/63d0ede8d3bf7f3c4df599d9/Postcode_level_standard_electricity_2017_A_to_K.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/media/63d0ede8d3bf7f3c4df599d9/Postcode_level_standard_electricity_2017_A_to_K.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "Postcode_level_standard_electricity_2017_A_to_K.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "Postcode_level_standard_electricity_2017",
+            "rdfs:seeAlso": "https://www.gov.uk/government/statistics/postcode-level-electricity-statistics-2017-experimental",  
+            "tableSchema": {
+                "primaryKey":["Outcode","Postcode"],
+                "columns": [
+                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Num_meters", "datatype": "integer"},
+                    {"name": "Total_cons_kwh", "datatype": "decimal"},
+                    {"name": "Mean_cons_kwh", "datatype": "decimal"},
+                    {"name": "Median_cons_kwh", "datatype": "decimal"}
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "https://assets.publishing.service.gov.uk/media/63d0ee01e90e071ba274698e/Postcode_level_standard_electricity_2017_K_to_Z.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/media/63d0ee01e90e071ba274698e/Postcode_level_standard_electricity_2017_K_to_Z.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "Postcode_level_standard_electricity_2017_K_to_Z.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "Postcode_level_standard_electricity_2017",
+            "rdfs:seeAlso": "https://www.gov.uk/government/statistics/postcode-level-electricity-statistics-2017-experimental",  
+            "tableSchema": {
+                "primaryKey":["Outcode","Postcode"],
+                "columns": [
+                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
                     {"name": "Num_meters", "datatype": "integer"},
                     {"name": "Total_cons_kwh", "datatype": "decimal"},
                     {"name": "Mean_cons_kwh", "datatype": "decimal"},
@@ -449,15 +753,91 @@
         {
             "@type": "Table",
             "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1131404/Postcode_level_gas_2016.csv",
-            "https://purl.org/berg/csvw_functions/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1131404/Postcode_level_gas_2016.csv", 
-            "https://purl.org/berg/csvw_functions/vocab/csv_file_name": "Postcode_level_gas_2016.csv",
-            "https://purl.org/berg/csvw_functions/vocab/sql_table_name": "Postcode_level_gas_2016",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1131404/Postcode_level_gas_2016.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "Postcode_level_gas_2016.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "Postcode_level_gas_2016",
             "rdfs:seeAlso": "https://www.gov.uk/government/statistics/postcode-level-gas-statistics-2016-experimental",  
             "tableSchema": {
                 "primaryKey":["Outcode","Postcode"],
                 "columns": [
-                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
-                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Num_meters", "datatype": "integer"},
+                    {"name": "Total_cons_kwh", "datatype": "decimal"},
+                    {"name": "Mean_cons_kwh", "datatype": "decimal"},
+                    {"name": "Median_cons_kwh", "datatype": "decimal"}
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "https://assets.publishing.service.gov.uk/media/63d10ed78fa8f53fe0ffea2b/Postcode_level_all_meters_electricity_2016.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/media/63d0ee38d3bf7f3c40d67260/Postcode_level_all_meters_electricity_2017.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "Postcode_level_all_meters_electricity_2016.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "Postcode_level_all_meters_electricity_2016",
+            "rdfs:seeAlso": "https://www.gov.uk/government/statistics/postcode-level-electricity-statistics-2016-experimental",  
+            "tableSchema": {
+                "primaryKey":["Outcode","Postcode"],
+                "columns": [
+                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Num_meters", "datatype": "integer"},
+                    {"name": "Total_cons_kwh", "datatype": "decimal"},
+                    {"name": "Mean_cons_kwh", "datatype": "decimal"},
+                    {"name": "Median_cons_kwh", "datatype": "decimal"}
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "https://assets.publishing.service.gov.uk/media/63d10ebee90e071ba1c26835/Postcode_level_economy_7_electricity_2016.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/media/63d10ebee90e071ba1c26835/Postcode_level_economy_7_electricity_2016.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "Postcode_level_economy_7_electricity_2016.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "Postcode_level_economy_7_electricity_2016",
+            "rdfs:seeAlso": "https://www.gov.uk/government/statistics/postcode-level-electricity-statistics-2016-experimental",  
+            "tableSchema": {
+                "primaryKey":["Outcode","Postcode"],
+                "columns": [
+                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Num_meters", "datatype": "integer"},
+                    {"name": "Total_cons_kwh", "datatype": "decimal"},
+                    {"name": "Mean_cons_kwh", "datatype": "decimal"},
+                    {"name": "Median_cons_kwh", "datatype": "decimal"}
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "https://assets.publishing.service.gov.uk/media/63d10da6e90e071ba7b41d6d/Postcode_level_standard_electricity_2016_A_to_K.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/media/63d10da6e90e071ba7b41d6d/Postcode_level_standard_electricity_2016_A_to_K.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "Postcode_level_standard_electricity_2016_A_to_K.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "Postcode_level_standard_electricity_2016",
+            "rdfs:seeAlso": "https://www.gov.uk/government/statistics/postcode-level-electricity-statistics-2016-experimental",  
+            "tableSchema": {
+                "primaryKey":["Outcode","Postcode"],
+                "columns": [
+                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Num_meters", "datatype": "integer"},
+                    {"name": "Total_cons_kwh", "datatype": "decimal"},
+                    {"name": "Mean_cons_kwh", "datatype": "decimal"},
+                    {"name": "Median_cons_kwh", "datatype": "decimal"}
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "https://assets.publishing.service.gov.uk/media/63d10dbee90e071babfa0d5f/Postcode_level_standard_electricity_2016_K_to_Z.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/media/63d10dbee90e071babfa0d5f/Postcode_level_standard_electricity_2016_K_to_Z.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "Postcode_level_standard_electricity_2016_K_to_Z.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "Postcode_level_standard_electricity_2016",
+            "rdfs:seeAlso": "https://www.gov.uk/government/statistics/postcode-level-electricity-statistics-2016-experimental",  
+            "tableSchema": {
+                "primaryKey":["Outcode","Postcode"],
+                "columns": [
+                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
                     {"name": "Num_meters", "datatype": "integer"},
                     {"name": "Total_cons_kwh", "datatype": "decimal"},
                     {"name": "Mean_cons_kwh", "datatype": "decimal"},
@@ -468,15 +848,91 @@
         {
             "@type": "Table",
             "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1131407/Postcode_level_gas_2015.csv",
-            "https://purl.org/berg/csvw_functions/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1131407/Postcode_level_gas_2015.csv", 
-            "https://purl.org/berg/csvw_functions/vocab/csv_file_name": "Postcode_level_gas_2015.csv",
-            "https://purl.org/berg/csvw_functions/vocab/sql_table_name": "Postcode_level_gas_2015",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1131407/Postcode_level_gas_2015.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "Postcode_level_gas_2015.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "Postcode_level_gas_2015",
             "rdfs:seeAlso": "https://www.gov.uk/government/statistics/postcode-level-gas-statistics-2015-experimental",  
             "tableSchema": {
                 "primaryKey":["Outcode","Postcode"],
                 "columns": [
-                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
-                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions/vocab/sqlsetindex": true},
+                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Num_meters", "datatype": "integer"},
+                    {"name": "Total_cons_kwh", "datatype": "decimal"},
+                    {"name": "Mean_cons_kwh", "datatype": "decimal"},
+                    {"name": "Median_cons_kwh", "datatype": "decimal"}
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "https://assets.publishing.service.gov.uk/media/63d10fbdd3bf7f3c42f93ddb/Postcode_level_all_meters_electricity_2015.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/media/63d10fbdd3bf7f3c42f93ddb/Postcode_level_all_meters_electricity_2015.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "Postcode_level_all_meters_electricity_2015.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "Postcode_level_all_meters_electricity_2015",
+            "rdfs:seeAlso": "https://www.gov.uk/government/statistics/postcode-level-electricity-statistics-2015-experimental",  
+            "tableSchema": {
+                "primaryKey":["Outcode","Postcode"],
+                "columns": [
+                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Num_meters", "datatype": "integer"},
+                    {"name": "Total_cons_kwh", "datatype": "decimal"},
+                    {"name": "Mean_cons_kwh", "datatype": "decimal"},
+                    {"name": "Median_cons_kwh", "datatype": "decimal"}
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "https://assets.publishing.service.gov.uk/media/63d10f9cd3bf7f3c478cfc7d/Postcode_level_economy_7_electricity_2015.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/media/63d10f9cd3bf7f3c478cfc7d/Postcode_level_economy_7_electricity_2015.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "Postcode_level_economy_7_electricity_2015.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "Postcode_level_economy_7_electricity_2015",
+            "rdfs:seeAlso": "https://www.gov.uk/government/statistics/postcode-level-electricity-statistics-2015-experimental",  
+            "tableSchema": {
+                "primaryKey":["Outcode","Postcode"],
+                "columns": [
+                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Num_meters", "datatype": "integer"},
+                    {"name": "Total_cons_kwh", "datatype": "decimal"},
+                    {"name": "Mean_cons_kwh", "datatype": "decimal"},
+                    {"name": "Median_cons_kwh", "datatype": "decimal"}
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "https://assets.publishing.service.gov.uk/media/63d10f72e90e071bb0278383/Postcode_level_standard_electricity_2015_A_to_L.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/media/63d10f72e90e071bb0278383/Postcode_level_standard_electricity_2015_A_to_L.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "Postcode_level_standard_electricity_2015_A_to_L.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "Postcode_level_standard_electricity_2015",
+            "rdfs:seeAlso": "https://www.gov.uk/government/statistics/postcode-level-electricity-statistics-2015-experimental",  
+            "tableSchema": {
+                "primaryKey":["Outcode","Postcode"],
+                "columns": [
+                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Num_meters", "datatype": "integer"},
+                    {"name": "Total_cons_kwh", "datatype": "decimal"},
+                    {"name": "Mean_cons_kwh", "datatype": "decimal"},
+                    {"name": "Median_cons_kwh", "datatype": "decimal"}
+                ]
+            }
+        },
+        {
+            "@type": "Table",
+            "url": "https://assets.publishing.service.gov.uk/media/63d10f88d3bf7f3c4900f0fa/Postcode_level_standard_electricity_2015_L_to_Z.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_download_url": "https://assets.publishing.service.gov.uk/media/63d10f88d3bf7f3c4900f0fa/Postcode_level_standard_electricity_2015_L_to_Z.csv", 
+            "https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name": "Postcode_level_standard_electricity_2015_L_to_Z.csv",
+            "https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name": "Postcode_level_standard_electricity_2015",
+            "rdfs:seeAlso": "https://www.gov.uk/government/statistics/postcode-level-electricity-statistics-2015-experimental",  
+            "tableSchema": {
+                "primaryKey":["Outcode","Postcode"],
+                "columns": [
+                    {"name": "Outcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
+                    {"name": "Postcode", "datatype": "string", "https://purl.org/berg/csvw_functions_extra/vocab/sqlsetindex": true},
                     {"name": "Num_meters", "datatype": "integer"},
                     {"name": "Total_cons_kwh", "datatype": "decimal"},
                     {"name": "Mean_cons_kwh", "datatype": "decimal"},
@@ -484,17 +940,5 @@
                 ]
             }
         }
-    ],
-    "https://purl.org/berg/csvw_functions/vocab/sql_table_name/placeholder":{
-        "@type": "Table",
-        "url": "test.csv",
-        "https://purl.org/berg/csvw_functions/vocab/csv_download_url": "", 
-        "https://purl.org/berg/csvw_functions/vocab/csv_file_name": "",
-        "https://purl.org/berg/csvw_functions/vocab/sql_table_name": "",
-        "rdfs:seeAlso": "",  
-        "tableSchema": {
-            "columns": [
-            ]
-        }
-    }
+    ]
 }

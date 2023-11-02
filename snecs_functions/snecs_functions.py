@@ -10,33 +10,31 @@ import urllib.request
 import json
 import os
 import sqlite3
-from csvw_functions import csvw_functions_extra
+import csvw_functions_extra
 
 
-_default_data_folder='_data'  # the default
-_default_database_name='snecs_data.sqlite'
+#_default_data_folder='_data'  # the default
+#_default_database_name='snecs_data.sqlite'
 
 urllib.request.urlcleanup()
 
 
 #%% data folder
 
-def set_data_folder(
-        metadata_document_location=r'https://raw.githubusercontent.com/building-energy/snecs_functions/main/snecs_tables-metadata.json', 
-        data_folder=_default_data_folder,
-        overwrite_existing_files=False,
-        database_name=_default_database_name,
-        remove_existing_tables=False,
+def download_and_import_all_data(
+        data_folder='_data',
+        database_name='snecs_data.sqlite',
         verbose=False,
         ):
     ""
+    metadata_document_location=r'https://raw.githubusercontent.com/building-energy/snecs_functions/main/snecs_tables-metadata.json', 
     
     # download all tables to data_folder
     fp_metadata=\
         csvw_functions_extra.download_table_group(
             metadata_document_location,
             data_folder=data_folder,
-            overwrite_existing_files=overwrite_existing_files,
+            overwrite_existing_files=True,
             verbose=verbose
             )
 
@@ -47,7 +45,7 @@ def set_data_folder(
         metadata_document_location=fp_metadata,
         data_folder=data_folder,
         database_name=database_name,
-        remove_existing_tables=remove_existing_tables,
+        remove_existing_tables=True,
         verbose=verbose
         )
 
@@ -117,8 +115,8 @@ def _get_where_clause_list(
 def get_government_office_region_elec(
         year=None,
         region_code=None,
-        data_folder=_default_data_folder,
-        database_name=_default_database_name,
+        data_folder='_data',
+        database_name='snecs_data.sqlite',
         verbose=False
         ):
     ""
@@ -145,8 +143,8 @@ def get_government_office_region_elec(
 def get_government_office_region_gas(
         year=None,
         region_code=None,
-        data_folder=_default_data_folder,
-        database_name=_default_database_name,
+        data_folder='_data',
+        database_name='snecs_data.sqlite',
         verbose=False
         ):
     ""
@@ -173,8 +171,8 @@ def get_government_office_region_gas(
 def get_local_authority_elec(
         year=None,
         la_code=None,
-        data_folder=_default_data_folder,
-        database_name=_default_database_name,
+        data_folder='_data',
+        database_name='snecs_data.sqlite',
         verbose=False
         ):
     ""
@@ -201,8 +199,9 @@ def get_local_authority_elec(
 def get_local_authority_gas(
         year=None,
         la_code=None,
-        data_folder=_default_data_folder,
-        database_name=_default_database_name,
+        region=None,
+        data_folder='_data',
+        database_name='snecs_data.sqlite',
         verbose=False
         ):
     ""
@@ -211,7 +210,7 @@ def get_local_authority_gas(
     fp_database=os.path.join(data_folder,database_name)
     
     where_clause=_get_where_clause_list(
-        {'year':year, 'la.code':la_code}
+        {'year':year, 'la.code':la_code, 'region':region}
         )
         
     query=f"SELECT * FROM {table_name} {where_clause};"
@@ -231,8 +230,8 @@ def get_LSOA_elec_domestic(
         la_code=None,
         msoa_code=None,
         lsoa_code=None,
-        data_folder=_default_data_folder,
-        database_name=_default_database_name,
+        data_folder='_data',
+        database_name='snecs_data.sqlite',
         verbose=False
         ):
     ""
@@ -261,8 +260,8 @@ def get_LSOA_gas_domestic(
         la_code=None,
         msoa_code=None,
         lsoa_code=None,
-        data_folder=_default_data_folder,
-        database_name=_default_database_name,
+        data_folder='_data',
+        database_name='snecs_data.sqlite',
         verbose=False
         ):
     ""
@@ -271,7 +270,10 @@ def get_LSOA_gas_domestic(
     fp_database=os.path.join(data_folder,database_name)
     
     where_clause=_get_where_clause_list(
-        {'year':year, 'la.code':la_code, 'msoa.code':msoa_code,'lsoa.code':lsoa_code}
+        {'year':year, 
+         'la.name':la_code,  # error in CSV file -> 'name' and 'code' are wrong way round
+         'msoa.name':msoa_code,
+         'lsoa.name':lsoa_code}
         )
         
     query=f"SELECT * FROM {table_name} {where_clause};"
@@ -290,8 +292,8 @@ def get_MSOA_elec_domestic(
         year=None,
         la_code=None,
         msoa_code=None,
-        data_folder=_default_data_folder,
-        database_name=_default_database_name,
+        data_folder='_data',
+        database_name='snecs_data.sqlite',
         verbose=False
         ):
     ""
@@ -319,8 +321,8 @@ def get_MSOA_gas_domestic(
         year=None,
         la_code=None,
         msoa_code=None,
-        data_folder=_default_data_folder,
-        database_name=_default_database_name,
+        data_folder='_data',
+        database_name='snecs_data.sqlite',
         verbose=False
         ):
     ""
@@ -348,8 +350,8 @@ def get_MSOA_elec_non_domestic(
         year=None,
         la_code=None,
         msoa_code=None,
-        data_folder=_default_data_folder,
-        database_name=_default_database_name,
+        data_folder='_data',
+        database_name='snecs_data.sqlite',
         verbose=False
         ):
     ""
@@ -377,8 +379,8 @@ def get_MSOA_gas_non_domestic(
         year=None,
         la_code=None,
         msoa_code=None,
-        data_folder=_default_data_folder,
-        database_name=_default_database_name,
+        data_folder='_data',
+        database_name='snecs_data.sqlite',
         verbose=False
         ):
     ""
@@ -406,8 +408,8 @@ def get_postcode_elec_all_meters(
         year,
         postcode=None,
         outcode=None,
-        data_folder=_default_data_folder,
-        database_name=_default_database_name,
+        data_folder='_data',
+        database_name='snecs_data.sqlite',
         verbose=False
         ):
     ""
@@ -435,8 +437,8 @@ def get_postcode_elec_economy_7(
         year,
         postcode=None,
         outcode=None,
-        data_folder=_default_data_folder,
-        database_name=_default_database_name,
+        data_folder='_data',
+        database_name='snecs_data.sqlite',
         verbose=False
         ):
     ""
@@ -464,8 +466,8 @@ def get_postcode_elec_standard(
         year,
         postcode=None,
         outcode=None,
-        data_folder=_default_data_folder,
-        database_name=_default_database_name,
+        data_folder='_data',
+        database_name='snecs_data.sqlite',
         verbose=False
         ):
     ""
@@ -493,8 +495,8 @@ def get_postcode_gas(
         year,
         postcode=None,
         outcode=None,
-        data_folder=_default_data_folder,
-        database_name=_default_database_name,
+        data_folder='_data',
+        database_name='snecs_data.sqlite',
         verbose=False
         ):
     ""
