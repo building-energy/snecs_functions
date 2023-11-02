@@ -27,7 +27,7 @@ def download_and_import_all_data(
         verbose=False,
         ):
     ""
-    metadata_document_location=r'https://raw.githubusercontent.com/building-energy/snecs_functions/main/snecs_tables-metadata.json', 
+    metadata_document_location=r'https://raw.githubusercontent.com/building-energy/snecs_functions/main/snecs_tables-metadata.json' 
     
     # download all tables to data_folder
     fp_metadata=\
