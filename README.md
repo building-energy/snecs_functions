@@ -25,7 +25,7 @@ A description of the CSV files in the SNECS dataset, along with instructions for
 import snecs_functions
 
 # downloads all CSV files to folder '_data' and import all the data to SQLite database 'snces_data.sqlite'
-snecs_functions.download_and_import_all_data(verbose=True) 
+snecs_functions.download_and_import_all_data() 
 
 # view gas consumption in Government Office Regions in 2019 and 2020
 result = snecs_functions.get_government_office_region_elec(region_code='E12000004' year=[2019,2020])
@@ -33,8 +33,8 @@ print(result)
 ```
 ```
 [
-        {'year': 2019, 'gor': 'E12000004', 'region': 'East Midlands', 'e7_meters': 598.736, 'standard_meters': 1494.085, 'domestic_meters': 2092.821, 'non_domestic_meters': 172.576, 'total_meters': 2265.397, 'e7_sales_gwh': 2607.405573, 'standard_sales_gwh': 4911.897206, 'domestic_sales_gwh': 7519.302779, 'non_domestic_sales_gwh': 12759.67612, 'total_gwh': 20278.9789, 'e7_mean_kwh': 4354.850173, 'e7_median_kwh': 3271.2, 'standard_mean_kwh': 3287.56209, 'standard_median_kwh': 2709.8, 'domestic_mean_kwh': 3592.902966, 'domestic_median_kwh': 2846.6, 'non_domestic_mean_kwh': 73936.56196, 'non_domestic_median_kwh': 8378.45, 'all_mean_kwh': 8951.622561, 'all_median_kwh': 2928.1, 'avg_per_hhld_kwh': 3719.672351}, 
-        {'year': 2020, 'gor': 'E12000004', 'region': 'East Midlands', 'e7_meters': 579.852, 'standard_meters': 1532.956, 'domestic_meters': 2112.808, 'non_domestic_meters': 172.466, 'total_meters': 2285.274, 'e7_sales_gwh': 2661.295432, 'standard_sales_gwh': 5337.930295, 'domestic_sales_gwh': 7999.225726, 'non_domestic_sales_gwh': 11468.72202, 'total_gwh': 19467.94775, 'e7_mean_kwh': 4589.611542, 'e7_median_kwh': 3379.3, 'standard_mean_kwh': 3482.115791, 'standard_median_kwh': 2808.8, 'domestic_mean_kwh': 3786.063725, 'domestic_median_kwh': 2941.2, 'non_domestic_mean_kwh': 66498.45199, 'non_domestic_median_kwh': 6556.95, 'all_mean_kwh': 8518.868087, 'all_median_kwh': 3002.1, 'avg_per_hhld_kwh': 3923.50087}
+ {'year': 2019, 'gor': 'E12000004', 'region': 'East Midlands', 'e7_meters': 598.736, 'standard_meters': 1494.085, 'domestic_meters': 2092.821, 'non_domestic_meters': 172.576, 'total_meters': 2265.397, 'e7_sales_gwh': 2607.405573, 'standard_sales_gwh': 4911.897206, 'domestic_sales_gwh': 7519.302779, 'non_domestic_sales_gwh': 12759.67612, 'total_gwh': 20278.9789, 'e7_mean_kwh': 4354.850173, 'e7_median_kwh': 3271.2, 'standard_mean_kwh': 3287.56209, 'standard_median_kwh': 2709.8, 'domestic_mean_kwh': 3592.902966, 'domestic_median_kwh': 2846.6, 'non_domestic_mean_kwh': 73936.56196, 'non_domestic_median_kwh': 8378.45, 'all_mean_kwh': 8951.622561, 'all_median_kwh': 2928.1, 'avg_per_hhld_kwh': 3719.672351}, 
+ {'year': 2020, 'gor': 'E12000004', 'region': 'East Midlands', 'e7_meters': 579.852, 'standard_meters': 1532.956, 'domestic_meters': 2112.808, 'non_domestic_meters': 172.466, 'total_meters': 2285.274, 'e7_sales_gwh': 2661.295432, 'standard_sales_gwh': 5337.930295, 'domestic_sales_gwh': 7999.225726, 'non_domestic_sales_gwh': 11468.72202, 'total_gwh': 19467.94775, 'e7_mean_kwh': 4589.611542, 'e7_median_kwh': 3379.3, 'standard_mean_kwh': 3482.115791, 'standard_median_kwh': 2808.8, 'domestic_mean_kwh': 3786.063725, 'domestic_median_kwh': 2941.2, 'non_domestic_mean_kwh': 66498.45199, 'non_domestic_median_kwh': 6556.95, 'all_mean_kwh': 8518.868087, 'all_median_kwh': 3002.1, 'avg_per_hhld_kwh': 3923.50087}
 ]
 ```
 
