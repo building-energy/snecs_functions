@@ -63,7 +63,7 @@ Running this function will:
 - import the CSV data into the SQLite database.
 
 Arguments:
-- **csv_file_names** *(str or list)*: The CSV file name(s) to download and import (see [`get_available_csv_file_names`](#get_available_csv_file_names)).
+- **csv_file_names** *(str, list or None)*: The CSV file name(s) to download and import (see [`get_available_csv_file_names`](#get_available_csv_file_names)). `None` will download the entire dataset.
 - **data_folder** *(str)*: The filepath of a local folder where the downloaded CSV data is saved to and the SQLite database is stored.
 - **database_name** *(str)*: The name of the SQLite database, relative to the data_folder.
 - **verbose (bool)**: If True, then this function prints intermediate variables and other useful information.
