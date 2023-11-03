@@ -71,9 +71,10 @@ Arguments:
 
 Returns: None
 
+
 ### get_government_office_region_elec
 
-Description: Returns electricity statistics for government office regions.
+Description: Returns the electricity statistics for government office regions.
 
 ```python
 snecs_functions.get_government_office_region_elec(
@@ -91,9 +92,10 @@ Arguments:
 
 Returns: A list of results dictionaries, based on the rows in the data table.
 
+
 ### get_government_office_region_gas
 
-Description: Returns gas statistics for government office regions.
+Description: Returns the gas statistics for government office regions.
 
 ```python
 snecs_functions.get_government_office_region_gas(
@@ -111,28 +113,33 @@ Arguments:
 
 Returns: A list of results dictionaries, based on the rows in the data table.
 
+
 ### get_local_authority_elec
 
-Description: Returns electricity statistics for government office regions.
+Description: Returns the electricity statistics for local authority regions.
 
 ```python
 snecs_functions.get_local_authority_elec(
         year=None,
         la_code=None,
+        region=None,
         data_folder='_data',
         database_name='snecs_data.sqlite',
         verbose=False
         )
 ```
+
 Arguments:
 - **year** *(int or list)*: Year(s) to filter by (2015 - 2021)
-- **la_code** *(str or list)*: ONS local authority code(s) to filter by
+- **la_code** *(str or list)*: ONS local authority code(s) to filter by (e.g. 'E06000001')
+- **region** *(str or list)*: Region name(s) to filter by (i.e. 'North East')
 
 Returns: A list of results dictionaries, based on the rows in the data table.
 
+
 ### get_local_authority_gas
 
-Description: Returns gas statistics for government office regions.
+Description: Returns the gas statistics for local authority regions.
 
 ```python
 snecs_functions.get_local_authority_gas(
@@ -147,11 +154,15 @@ snecs_functions.get_local_authority_gas(
 
 Arguments:
 - **year** *(int or list)*: Year(s) to filter by (2015 - 2021)
-- **la_code** *(str or list)*: ONS local authority code(s) to filter by
+- **la_code** *(str or list)*: ONS local authority code(s) to filter by (e.g. 'E06000001')
+- **region** *(str or list)*: Region name(s) to filter by (i.e. 'North East')
 
 Returns: A list of results dictionaries, based on the rows in the data table.
 
+
 ### get_LSOA_elec_domestic
+
+Description: Returns the domestic electricity statistics for Lower Super Output Areas.
 
 ```python
 snecs_functions.get_LSOA_elec_domestic(
@@ -165,7 +176,18 @@ snecs_functions.get_LSOA_elec_domestic(
         )
 ```
 
+Arguments:
+- **year** *(int or list)*: Year(s) to filter by (2015 - 2021)
+- **la_code** *(str or list)*: ONS local authority code(s) to filter by (e.g. 'E06000001')
+- **msoa_code** *(str or list)*: ONS MSOA code(s) to filter on
+- **lsoa_code** *(str or list)*: ONS LSOA code(s) to filter on
+
+Returns: A list of results dictionaries, based on the rows in the data table.
+
+
 ### get_LSOA_gas_domestic
+
+Description: Returns the domestic gas statistics for Lower Super Output Areas.
 
 ```python
 snecs_functions.get_LSOA_gas_domestic(
@@ -179,7 +201,18 @@ snecs_functions.get_LSOA_gas_domestic(
         )
 ```
 
+Arguments:
+- **year** *(int or list)*: Year(s) to filter by (2015 - 2021)
+- **la_code** *(str or list)*: ONS local authority code(s) to filter by (e.g. 'E06000001')
+- **msoa_code** *(str or list)*: ONS MSOA code(s) to filter on
+- **lsoa_code** *(str or list)*: ONS LSOA code(s) to filter on
+
+Returns: A list of results dictionaries, based on the rows in the data table.
+
+
 ### get_MSOA_elec_domestic
+
+Description: Returns the domestic electricity statistics for Middle Super Output Areas.
 
 ```python
 snecs_functions.get_MSOA_elec_domestic(
@@ -192,7 +225,17 @@ snecs_functions.get_MSOA_elec_domestic(
         )
 ```
 
+Arguments:
+- **year** *(int or list)*: Year(s) to filter by (2015 - 2021)
+- **la_code** *(str or list)*: ONS local authority code(s) to filter by (e.g. 'E06000001')
+- **msoa_code** *(str or list)*: ONS MSOA code(s) to filter on
+
+Returns: A list of results dictionaries, based on the rows in the data table.
+
+
 ### get_MSOA_gas_domestic
+
+Description: Returns the doemstic gas statistics for Middle Super Output Areas.
 
 ```python
 snecs_functions.get_MSOA_gas_domestic(
@@ -205,7 +248,17 @@ snecs_functions.get_MSOA_gas_domestic(
         )
 ```
 
+Arguments:
+- **year** *(int or list)*: Year(s) to filter by (2015 - 2021)
+- **la_code** *(str or list)*: ONS local authority code(s) to filter by (e.g. 'E06000001')
+- **msoa_code** *(str or list)*: ONS MSOA code(s) to filter on
+
+Returns: A list of results dictionaries, based on the rows in the data table.
+
+
 ### get_MSOA_elec_non_domestic
+
+Description: Returns the non-domestic electricity statistics for Middle Super Output Areas.
 
 ```python
 snecs_functions.get_MSOA_elec_non_domestic(
@@ -218,7 +271,17 @@ snecs_functions.get_MSOA_elec_non_domestic(
         )
 ```
 
+Arguments:
+- **year** *(int or list)*: Year(s) to filter by (2015 - 2021)
+- **la_code** *(str or list)*: ONS local authority code(s) to filter by (e.g. 'E06000001')
+- **msoa_code** *(str or list)*: ONS MSOA code(s) to filter on
+
+Returns: A list of results dictionaries, based on the rows in the data table.
+
+
 ### get_MSOA_gas_non_domestic
+
+Description: Returns the non-domestic gas statistics for Middle Super Output Areas.
 
 ```python
 snecs_functions.get_MSOA_gas_non_domestic(
@@ -231,7 +294,17 @@ snecs_functions.get_MSOA_gas_non_domestic(
         )
 ```
 
+Arguments:
+- **year** *(int or list)*: Year(s) to filter by (2015 - 2021)
+- **la_code** *(str or list)*: ONS local authority code(s) to filter by (e.g. 'E06000001')
+- **msoa_code** *(str or list)*: ONS MSOA code(s) to filter on
+
+Returns: A list of results dictionaries, based on the rows in the data table.
+
+
 ### get_postcode_elec_all_meters
+
+Description: Returns the electricity statistics for all meters for postcodes.
 
 ```python
 snecs_functions.get_postcode_elec_all_meters(
@@ -244,7 +317,17 @@ snecs_functions.get_postcode_elec_all_meters(
         )
 ```
 
+Arguments:
+- **year** *(int)*: The year to filter by (2015 - 2021)
+- **postcode** *(str or list)*: The postcode(s) to filter by
+- **outcode** *(str or list)*: The outcode(s) to filter by
+
+Returns: A list of results dictionaries, based on the rows in the data table.
+
+
 ### get_postcode_elec_economy_7
+
+Description: Returns the electricity statistics for economy 7 meters for postcodes.
 
 ```python
 snecs_functions.get_postcode_elec_economy_7(
@@ -256,8 +339,17 @@ snecs_functions.get_postcode_elec_economy_7(
         verbose=False
         )
 ```
+Arguments:
+- **year** *(int)*: The year to filter by (2015 - 2021)
+- **postcode** *(str or list)*: The postcode(s) to filter by
+- **outcode** *(str or list)*: The outcode(s) to filter by
+
+Returns: A list of results dictionaries, based on the rows in the data table.
+
 
 ### get_postcode_elec_standard
+
+Description: Returns the electricity statistics for standard meters for postcodes.
 
 ```python
 snecs_functions.get_postcode_elec_standard(
@@ -269,8 +361,17 @@ snecs_functions.get_postcode_elec_standard(
         verbose=False
         )
 ```
+Arguments:
+- **year** *(int)*: The year to filter by (2015 - 2021)
+- **postcode** *(str or list)*: The postcode(s) to filter by
+- **outcode** *(str or list)*: The outcode(s) to filter by
+
+Returns: A list of results dictionaries, based on the rows in the data table.
+
 
 ### get_postcode_gas
+
+Description: Returns the gas statistics for postcodes.
 
 ```python
 snecs_functions.get_postcode_gas(
@@ -282,4 +383,10 @@ snecs_functions.get_postcode_gas(
         verbose=False
         )
 ```
+Arguments:
+- **year** *(int)*: The year to filter by (2015 - 2021)
+- **postcode** *(str or list)*: The postcode(s) to filter by
+- **outcode** *(str or list)*: The outcode(s) to filter by
+
+Returns: A list of results dictionaries, based on the rows in the data table.
 

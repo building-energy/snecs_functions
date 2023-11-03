@@ -171,6 +171,7 @@ def get_government_office_region_gas(
 def get_local_authority_elec(
         year=None,
         la_code=None,
+        region=None,
         data_folder='_data',
         database_name='snecs_data.sqlite',
         verbose=False
@@ -181,7 +182,7 @@ def get_local_authority_elec(
     fp_database=os.path.join(data_folder,database_name)
     
     where_clause=_get_where_clause_list(
-        {'year':year, 'la_code':la_code}
+        {'year':year, 'la_code':la_code, 'region':region}
         )
         
     query=f"SELECT * FROM {table_name} {where_clause};"

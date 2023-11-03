@@ -75,6 +75,10 @@ class TestMainFunctions(unittest.TestCase):
     
     def test_get_government_office_region_elec(self):
         ""
+        result=snecs_functions.get_government_office_region_elec()
+        #print(result[0])
+        x={x['gor']:x['region'] for x in result}
+        #print(x)
     
     
     def test_get_government_office_region_gas(self):
@@ -108,11 +112,18 @@ class TestMainFunctions(unittest.TestCase):
     
     def test_get_local_authority_elec(self):
         ""
-        
+        result=snecs_functions.get_local_authority_elec(
+            year=2021
+            )
+        #print(result[0])
         
         
     def test_get_local_authority_gas(self):
         ""
+        result=snecs_functions.get_local_authority_gas(
+            year=2021
+            )
+        #print(result[0])
         
         
     def test_LSOA_elec_domestic(self):
@@ -127,7 +138,7 @@ class TestMainFunctions(unittest.TestCase):
             #region_code='E12000004',
             #verbose=True
             )
-        print(len(result))
+        #print(len(result))
         
         
         
