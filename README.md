@@ -46,6 +46,7 @@ Description: Downloads all the SNECS data and imports all data into a SQLite dat
 
 ```python
 snecs_functions.download_and_import_all_data(
+        csv_file_names = None,
         data_folder='_data',
         database_name='snecs_data.sqlite',
         verbose=False,
@@ -54,13 +55,15 @@ snecs_functions.download_and_import_all_data(
 
 The data to be downloaded is described in the CSVW metadata file here: https://raw.githubusercontent.com/building-energy/snecs_functions/main/snecs_tables-metadata.json
 
-This makes use of two functions in the [csvw_functions_extra](https://github.com/stevenkfirth/csvw_functions_extra) package:
-- download_table_group
-- import_table_group_to_sqlite
-
-These functions can also be called directly, using the CSVW metadata file above, to download and import individual SNECS tables as needed.
+Running this function will:
+- create the `data_folder` if it does not already exist.
+- download the CSV files to the data folder.
+- download the CSVW metadata file to the data folder. This is named 'snecs_tables-metadata.json'.
+- create a SQLite database named `database_name` in the data folder if it does not already exist.
+- import the CSV data into the SQLite database.
 
 Arguments:
+- **csv_file_names** *(str or list)*: The CSV file name(s) to download and import (see [`get_available_csv_file_names`](#get_available_csv_file_names)).
 - **data_folder** *(str)*: The filepath of a local folder where the downloaded CSV data is saved to and the SQLite database is stored.
 - **database_name** *(str)*: The name of the SQLite database, relative to the data_folder.
 - **verbose (bool)**: If True, then this function prints intermediate variables and other useful information.
@@ -77,6 +80,20 @@ snecs_functions.get_available_csv_file_names()
 ```
 
 Returns: A list of the `https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name` value in each table.
+
+
+### get_table_names_in_database
+
+Description: Returns the table names of all SNECS tables in the SQLite database.
+
+```python
+snecs_functions.get_table_names_in_database(
+        data_folder = '_data',
+        database_name = 'snecs_data.sqlite',
+        )
+```
+
+Returns: A list of table names.
 
 
 ### get_government_office_region_elec

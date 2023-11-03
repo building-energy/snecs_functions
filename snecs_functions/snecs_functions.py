@@ -25,6 +25,7 @@ metadata_document_location=r'https://raw.githubusercontent.com/building-energy/s
 #%% data folder
 
 def download_and_import_all_data(
+        csv_file_names = None,
         data_folder='_data',
         database_name='snecs_data.sqlite',
         verbose=False,
@@ -35,6 +36,7 @@ def download_and_import_all_data(
     fp_metadata=\
         csvw_functions_extra.download_table_group(
             metadata_document_location = metadata_document_location,
+            csv_file_names = csv_file_names,
             data_folder = data_folder,
             overwrite_existing_files = True,
             verbose = verbose
@@ -45,9 +47,10 @@ def download_and_import_all_data(
     # import all tables to sqlite
     csvw_functions_extra.import_table_group_to_sqlite(
         metadata_document_location=fp_metadata,
+        csv_file_names = csv_file_names,
         data_folder=data_folder,
         database_name=database_name,
-        remove_existing_tables=True,
+        overwrite_existing_tables=True,
         verbose=verbose
         )
 
@@ -65,18 +68,48 @@ def get_available_csv_file_names(
     return result
     
 
-def _read_metadata_table_group_dict(
-        data_folder,
+def get_table_names_in_database(
+        data_folder = '_data',
+        database_name = 'snecs_data.sqlite',
+        ):
+    """
+    """
+    fp_database=os.path.join(data_folder,database_name)
+    
+    metadata_table_group_dict = \
+        _get_local_metadata_table_group_dict(
+                data_folder,
+                )
+        
+    sql_table_names = \
+        [metadata_table_dict['https://purl.org/berg/csvw_functions_extra/vocab/sql_table_name']['@value']
+         for metadata_table_dict
+         in metadata_table_group_dict['tables']]
+    
+    with sqlite3.connect(fp_database) as conn:
+        c = conn.cursor()
+        result=[x[0] for x in c.execute('SELECT name FROM sqlite_master WHERE type="table"').fetchall()]
+    
+    result=[x for x in result if x in sql_table_names]
+    
+    return result
+    
+    
+
+
+def _get_local_metadata_table_group_dict(
+        data_folder = '_data',
         ):
     ""
-    fp=os.path.join(
-        data_folder,
-        'snecs_tables-metadata.json'
-        )
-    with open(fp) as f:
-        metadata_table_group_dic=json.load(f)
+    metadata_filename = 'snecs_tables-metadata.json'
         
-    return metadata_table_group_dic
+    metadata_table_group_dict = \
+        csvw_functions_extra.get_metadata_table_group_dict(
+        data_folder,
+        metadata_filename
+        )
+        
+    return metadata_table_group_dict
         
 
     
