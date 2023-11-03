@@ -68,6 +68,17 @@ Arguments:
 Returns: None
 
 
+### get_available_csv_file_names
+
+Description: Returns the CSV file names of all tables in the [CSVW metadata file](https://raw.githubusercontent.com/building-energy/snecs_functions/main/snecs_tables-metadata.json).
+
+```python
+snecs_functions.get_available_csv_file_names()
+```
+
+Returns: A list of the `https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name` value in each table.
+
+
 ### get_government_office_region_elec
 
 Description: Returns the electricity statistics for government office regions.

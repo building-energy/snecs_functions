@@ -55,6 +55,59 @@ class TestDataFolder(unittest.TestCase):
                 )
 
 
+    def test_get_available_csv_file_names(self):
+        ""
+        result = snecs_functions.get_available_csv_file_names()
+        #print(result)
+        self.assertEqual(
+            result,
+            ['gas_GOR_stacked_2005_21.csv', 
+             'elec_GOR_stacked_2005_21.csv', 
+             'gas_LA_stacked_2005_21.csv', 
+             'elec_LA_stacked_2005_21.csv', 
+             'gas_domestic_MSOA_stacked_2010_21.csv', 
+             'elec_domestic_MSOA_stacked_2010_21.csv', 
+             'gas_domestic_LSOA_stacked_2010_21.csv', 
+             'elec_domestic_LSOA_stacked_2010_21.csv', 
+             'gas_non_domestic_MSOA_stacked_2010_21.csv', 
+             'elec_non_domestic_MSOA_stacked_2010_21.csv', 
+             'Postcode_level_gas_2021.csv', 
+             'Postcode_level_all_meters_electricity_2021.csv', 
+             'Postcode_level_economy_7_electricity_2021.csv', 
+             'Postcode_level_standard_electricity_2021_A_to_K.csv', 
+             'Postcode_level_standard_electricity_2021_K_to_Z.csv', 
+             'Postcode_level_gas_2020.csv', 
+             'Postcode_level_all_meters_electricity_2020.csv', 
+             'Postcode_level_economy_7_electricity_2020.csv', 
+             'Postcode_level_standard_electricity_2020_A_to_K.csv', 
+             'Postcode_level_standard_electricity_2020_K_to_Z.csv', 
+             'Postcode_level_gas_2019.csv', 
+             'Postcode_level_all_meters_electricity_2019.csv', 
+             'Postcode_level_economy_7_electricity_2019.csv', 
+             'Postcode_level_standard_electricity_2019_A_to_K.csv', 
+             'Postcode_level_standard_electricity_2019_K_to_Z.csv', 
+             'Postcode_level_gas_2018.csv', 
+             'Postcode_level_all_meters_electricity_2018.csv', 
+             'Postcode_level_economy_7_electricity_2018.csv', 
+             'Postcode_level_standard_electricity_2018_A_to_K.csv', 
+             'Postcode_level_standard_electricity_2018_K_to_Z.csv', 
+             'Postcode_level_gas_2017.csv', 
+             'Postcode_level_all_meters_electricity_2017.csv', 
+             'Postcode_level_economy_7_electricity_2017.csv', 
+             'Postcode_level_standard_electricity_2017_A_to_K.csv', 
+             'Postcode_level_standard_electricity_2017_K_to_Z.csv', 
+             'Postcode_level_gas_2016.csv', 
+             'Postcode_level_all_meters_electricity_2016.csv', 
+             'Postcode_level_economy_7_electricity_2016.csv', 
+             'Postcode_level_standard_electricity_2016_A_to_K.csv', 
+             'Postcode_level_standard_electricity_2016_K_to_Z.csv', 
+             'Postcode_level_gas_2015.csv', 
+             'Postcode_level_all_meters_electricity_2015.csv', 
+             'Postcode_level_economy_7_electricity_2015.csv', 
+             'Postcode_level_standard_electricity_2015_A_to_L.csv', 
+             'Postcode_level_standard_electricity_2015_L_to_Z.csv'
+             ])
+
 
 
     def test__read_metadata_table_group_dict(self):

@@ -18,6 +18,9 @@ import csvw_functions_extra
 
 urllib.request.urlcleanup()
 
+metadata_document_location=r'https://raw.githubusercontent.com/building-energy/snecs_functions/main/snecs_tables-metadata.json' 
+
+
 
 #%% data folder
 
@@ -27,15 +30,14 @@ def download_and_import_all_data(
         verbose=False,
         ):
     ""
-    metadata_document_location=r'https://raw.githubusercontent.com/building-energy/snecs_functions/main/snecs_tables-metadata.json' 
     
     # download all tables to data_folder
     fp_metadata=\
         csvw_functions_extra.download_table_group(
-            metadata_document_location,
-            data_folder=data_folder,
-            overwrite_existing_files=True,
-            verbose=verbose
+            metadata_document_location = metadata_document_location,
+            data_folder = data_folder,
+            overwrite_existing_files = True,
+            verbose = verbose
             )
 
     #return
@@ -49,6 +51,19 @@ def download_and_import_all_data(
         verbose=verbose
         )
 
+
+def get_available_csv_file_names(
+        ):
+    """Returns the CSV file names of all tables in the (remote) CSVW metadata file.
+    
+    """
+    result = \
+        csvw_functions_extra.get_available_csv_file_names(
+            metadata_document_location = metadata_document_location
+            )
+    
+    return result
+    
 
 def _read_metadata_table_group_dict(
         data_folder,
@@ -67,49 +82,6 @@ def _read_metadata_table_group_dict(
     
 #%% main functions
 
-def _convert_to_iterator(
-        x
-        ):
-    ""
-    if x is None:
-        return []
-    elif isinstance(x,str):
-        return [x]
-    else:
-        try:   
-            _ = iter(x)
-            return x
-        except TypeError:
-            return [x]
-            
-
-def _get_where_clause_list(
-        d
-        ):
-    ""
-    conditions=[]
-    
-    for k,v in d.items():
-        
-        if not v is None:
-            
-            x=_convert_to_iterator(v)
-            x=[f'"{x}"' if isinstance(x,str) else f'{x}' for x in x] 
-            if len(x)==1:
-                x=f'("{k}" = {x[0]})'
-            elif len(x)>1:
-                x=','.join(x)
-                x=f'("{k}" IN ({x}))'
-            conditions.append(x)
-            
-    result=''
-            
-    if len(conditions)>0:
-        
-        x=' AND '.join(conditions)
-        result=f'WHERE {x}'
-        
-    return result
 
 
 def get_government_office_region_elec(
@@ -124,7 +96,7 @@ def get_government_office_region_elec(
     
     fp_database=os.path.join(data_folder,database_name)
     
-    where_clause=_get_where_clause_list(
+    where_clause=csvw_functions_extra.get_where_clause_list(
         {'year':year, 'gor':region_code}
         )
         
@@ -152,7 +124,7 @@ def get_government_office_region_gas(
     
     fp_database=os.path.join(data_folder,database_name)
     
-    where_clause=_get_where_clause_list(
+    where_clause=csvw_functions_extra.get_where_clause_list(
         {'year':year, 'region.code':region_code}
         )
         
@@ -181,7 +153,7 @@ def get_local_authority_elec(
     
     fp_database=os.path.join(data_folder,database_name)
     
-    where_clause=_get_where_clause_list(
+    where_clause=csvw_functions_extra.get_where_clause_list(
         {'year':year, 'la_code':la_code, 'region':region}
         )
         
@@ -210,7 +182,7 @@ def get_local_authority_gas(
     
     fp_database=os.path.join(data_folder,database_name)
     
-    where_clause=_get_where_clause_list(
+    where_clause=csvw_functions_extra.get_where_clause_list(
         {'year':year, 'la.code':la_code, 'region':region}
         )
         
@@ -240,7 +212,7 @@ def get_LSOA_elec_domestic(
     
     fp_database=os.path.join(data_folder,database_name)
     
-    where_clause=_get_where_clause_list(
+    where_clause=csvw_functions_extra.get_where_clause_list(
         {'YEAR':year, 'LACode':la_code, 'MSOACode':msoa_code,'LSOACode':lsoa_code}
         )
         
@@ -270,7 +242,7 @@ def get_LSOA_gas_domestic(
     
     fp_database=os.path.join(data_folder,database_name)
     
-    where_clause=_get_where_clause_list(
+    where_clause=csvw_functions_extra.get_where_clause_list(
         {'year':year, 
          'la.name':la_code,  # error in CSV file -> 'name' and 'code' are wrong way round
          'msoa.name':msoa_code,
@@ -302,7 +274,7 @@ def get_MSOA_elec_domestic(
     
     fp_database=os.path.join(data_folder,database_name)
     
-    where_clause=_get_where_clause_list(
+    where_clause=csvw_functions_extra.get_where_clause_list(
         {'YEAR':year, 'LACode':la_code, 'MSOAcode':msoa_code}
         )
         
@@ -331,7 +303,7 @@ def get_MSOA_gas_domestic(
     
     fp_database=os.path.join(data_folder,database_name)
     
-    where_clause=_get_where_clause_list(
+    where_clause=csvw_functions_extra.get_where_clause_list(
         {'year':year, 'la.code':la_code, 'msoa.code':msoa_code}
         )
         
@@ -360,7 +332,7 @@ def get_MSOA_elec_non_domestic(
     
     fp_database=os.path.join(data_folder,database_name)
     
-    where_clause=_get_where_clause_list(
+    where_clause=csvw_functions_extra.get_where_clause_list(
         {'YEAR':year, 'LACode':la_code, 'MSOAcode':msoa_code}
         )
         
@@ -389,7 +361,7 @@ def get_MSOA_gas_non_domestic(
     
     fp_database=os.path.join(data_folder,database_name)
     
-    where_clause=_get_where_clause_list(
+    where_clause=csvw_functions_extra.get_where_clause_list(
         {'year':year, 'la.code':la_code, 'msoa.code':msoa_code}
         )
         
@@ -418,7 +390,7 @@ def get_postcode_elec_all_meters(
     
     fp_database=os.path.join(data_folder,database_name)
     
-    where_clause=_get_where_clause_list(
+    where_clause=csvw_functions_extra.get_where_clause_list(
         dict(Postcode=postcode, Outcode=outcode)
         )
         
@@ -447,7 +419,7 @@ def get_postcode_elec_economy_7(
     
     fp_database=os.path.join(data_folder,database_name)
     
-    where_clause=_get_where_clause_list(
+    where_clause=csvw_functions_extra.get_where_clause_list(
         dict(Postcode=postcode, Outcode=outcode)
         )
         
@@ -476,7 +448,7 @@ def get_postcode_elec_standard(
     
     fp_database=os.path.join(data_folder,database_name)
     
-    where_clause=_get_where_clause_list(
+    where_clause=csvw_functions_extra.get_where_clause_list(
         dict(Postcode=postcode, Outcode=outcode)
         )
         
@@ -505,7 +477,7 @@ def get_postcode_gas(
     
     fp_database=os.path.join(data_folder,database_name)
     
-    where_clause=_get_where_clause_list(
+    where_clause=csvw_functions_extra.get_where_clause_list(
         dict(Postcode=postcode, Outcode=outcode)
         )
         
