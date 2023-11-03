@@ -19,6 +19,8 @@ A description of the CSV files in the SNECS dataset, along with instructions for
 
 `pip install git+https://github.com/building-energy/snecs_functions`
 
+The python packages [`csvw_functions`](https://github.com/stevenkfirth/csvw_functions) and [`csvw_functions-extra`](https://github.com/stevenkfirth/csvw_functions) will also need to be installed.
+
 ## Quick Start
 
 ```python
