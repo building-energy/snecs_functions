@@ -24,10 +24,10 @@ A description of the CSV files in the SNECS dataset, along with instructions for
 ```python
 import snecs_functions
 
-# downloads all CSV files to folder '_data' and import all the data to SQLite database 'snces_data.sqlite'
+# downloads all CSV files to folder '_data' and import all the data to SQLite database 'snecs_data.sqlite'
 snecs_functions.download_and_import_all_data() 
 
-# view gas consumption in Government Office Regions in 2019 and 2020
+# view gas consumption in the East Midlands in 2019 and 2020
 result = snecs_functions.get_government_office_region_elec(region_code='E12000004' year=[2019,2020])
 print(result)
 ```
