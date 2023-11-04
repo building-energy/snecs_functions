@@ -42,12 +42,12 @@ print(result)
 
 ## API
 
-### download_and_import_all_data
+### download_and_import_data
 
 Description: Downloads all the SNECS data and imports all data into a SQLite database.
 
 ```python
-snecs_functions.download_and_import_all_data(
+snecs_functions.download_and_import_data(
         csv_file_names = None,
         data_folder='_data',
         database_name='snecs_data.sqlite',
@@ -84,12 +84,12 @@ snecs_functions.get_available_csv_file_names()
 Returns: A list of the `https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name` value in each table.
 
 
-### get_table_names_in_database
+### get_snecs_table_names_in_database
 
 Description: Returns the table names of all SNECS tables in the SQLite database.
 
 ```python
-snecs_functions.get_table_names_in_database(
+snecs_functions.get_snecs_table_names_in_database(
         data_folder = '_data',
         database_name = 'snecs_data.sqlite',
         )

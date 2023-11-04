@@ -19,42 +19,6 @@ import os
 class TestDataFolder(unittest.TestCase):
     ""
     
-    def _test_download_and_import_all_data(self):
-        ""
-        
-        snecs_functions.download_and_import_all_data(
-            verbose=True,
-            )
-
-
-    def _test_download_all_data_LOCAL(self):
-        ""
-        fp_table_group_metadata = \
-            os.path.join(os.pardir,'snecs_tables-metadata.json')
-        
-        csvw_functions_extra.download_table_group(
-            metadata_document_location=fp_table_group_metadata,
-            data_folder='_data',
-            overwrite_existing_files=False,
-            verbose=True
-            )
-        
-        
-    def _test_import_all_data(self):
-        ""
-        fp_table_group_metadata = \
-            os.path.join('_data','snecs_tables-metadata.json')
-        
-        csvw_functions_extra.import_table_group_to_sqlite(
-                metadata_document_location=fp_table_group_metadata,
-                data_folder='_data',
-                database_name='snecs_data.sqlite',
-                csv_file_names=None,  # if none then all are imported
-                overwrite_existing_tables=True,
-                verbose=True
-                )
-
-
     def test_get_available_csv_file_names(self):
         ""
         result = snecs_functions.get_available_csv_file_names()
@@ -109,22 +73,84 @@ class TestDataFolder(unittest.TestCase):
              ])
 
 
-
-    def test__read_metadata_table_group_dict(self):
+    def _test__download_table_group_LOCAL_METADATA(self):
         ""
+        fp_table_group_metadata = \
+            os.path.join(os.pardir,'snecs_tables-metadata.json')
         
+        csvw_functions_extra.download_table_group(
+            metadata_document_location=fp_table_group_metadata,
+            data_folder='_data',
+            overwrite_existing_files=False,
+            verbose=True
+            )
+        
+    def _test__import_table_group_to_sqlite(self):
+        ""
+        snecs_functions._import_table_group_to_sqlite(
+            verbose=True)
+    
+    
+    def _test_download_and_import_data(self):
+        ""
+        snecs_functions.download_and_import_data(
+            verbose=True,
+            )
+
+
+    def test_get_snecs_table_names_in_database(self):
+        ""
+        result = \
+            snecs_functions.get_snecs_table_names_in_database()
+        #print(result)
+        self.assertEqual(
+            result,
+            [
+                'gas_GOR_stacked_2005_21', 
+                'elec_GOR_stacked_2005_21', 
+                'gas_LA_stacked_2005_21', 
+                'elec_LA_stacked_2005_21', 
+                'gas_domestic_MSOA_stacked_2010_21', 
+                'elec_domestic_MSOA_stacked_2010_21', 
+                'gas_domestic_LSOA_stacked_2010_21', 
+                'elec_domestic_LSOA_stacked_2010_21', 
+                'gas_non_domestic_MSOA_stacked_2010_21', 
+                'elec_non_domestic_MSOA_stacked_2010_21', 
+                'Postcode_level_gas_2021', 
+                'Postcode_level_all_meters_electricity_2021', 
+                'Postcode_level_economy_7_electricity_2021', 
+                'Postcode_level_standard_electricity_2021', 
+                'Postcode_level_gas_2020', 
+                'Postcode_level_all_meters_electricity_2020', 
+                'Postcode_level_economy_7_electricity_2020', 
+                'Postcode_level_standard_electricity_2020', 
+                'Postcode_level_gas_2019', 
+                'Postcode_level_all_meters_electricity_2019', 
+                'Postcode_level_economy_7_electricity_2019', 
+                'Postcode_level_standard_electricity_2019', 
+                'Postcode_level_gas_2018', 
+                'Postcode_level_all_meters_electricity_2018', 
+                'Postcode_level_economy_7_electricity_2018', 
+                'Postcode_level_standard_electricity_2018', 
+                'Postcode_level_gas_2017', 
+                'Postcode_level_all_meters_electricity_2017', 
+                'Postcode_level_economy_7_electricity_2017', 
+                'Postcode_level_standard_electricity_2017', 
+                'Postcode_level_gas_2016', 
+                'Postcode_level_all_meters_electricity_2016', 
+                'Postcode_level_economy_7_electricity_2016', 
+                'Postcode_level_standard_electricity_2016', 
+                'Postcode_level_gas_2015', 
+                'Postcode_level_all_meters_electricity_2015', 
+                'Postcode_level_economy_7_electricity_2015', 
+                'Postcode_level_standard_electricity_2015'
+                ]
+            )
+            
 
 
 class TestMainFunctions(unittest.TestCase):
     ""
-    
-    def test__convert_to_iterator(self):
-        ""
-        
-        
-    def test__get_where_clause_list(self):
-        ""
-        
     
     def test_get_government_office_region_elec(self):
         ""
