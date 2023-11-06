@@ -3,9 +3,9 @@
 """
 """
 
-from .snecs_functions import download_and_import_data
 
 from .snecs_functions import get_available_csv_file_names
+from .snecs_functions import download_and_import_data
 from .snecs_functions import get_snecs_table_names_in_database
 
 from .snecs_functions import get_government_office_region_elec

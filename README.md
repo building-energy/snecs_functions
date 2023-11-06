@@ -42,6 +42,17 @@ print(result)
 
 ## API
 
+### get_available_csv_file_names
+
+Description: Returns the CSV file names of all tables in the [CSVW metadata file](https://raw.githubusercontent.com/building-energy/snecs_functions/main/snecs_tables-metadata.json).
+
+```python
+snecs_functions.get_available_csv_file_names()
+```
+
+Returns: A list of the `https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name` value in each table.
+
+
 ### download_and_import_data
 
 Description: Downloads all the SNECS data and imports all data into a SQLite database.
@@ -71,17 +82,6 @@ Arguments:
 - **verbose (bool)**: If True, then this function prints intermediate variables and other useful information.
 
 Returns: None
-
-
-### get_available_csv_file_names
-
-Description: Returns the CSV file names of all tables in the [CSVW metadata file](https://raw.githubusercontent.com/building-energy/snecs_functions/main/snecs_tables-metadata.json).
-
-```python
-snecs_functions.get_available_csv_file_names()
-```
-
-Returns: A list of the `https://purl.org/berg/csvw_functions_extra/vocab/csv_file_name` value in each table.
 
 
 ### get_snecs_table_names_in_database
