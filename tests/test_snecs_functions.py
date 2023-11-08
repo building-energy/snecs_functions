@@ -252,7 +252,8 @@ class TestMainFunctions(unittest.TestCase):
         
         result=snecs_functions.get_postcode_gas(
             year=2021,
-            postcode='LE11 3PE'
+            postcode='LE11 3PE',
+            verbose=False
             )
         #print(result)
         self.assertEqual(

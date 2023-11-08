@@ -116,411 +116,449 @@ def get_snecs_table_names_in_database(
 #%% main functions
 
 def get_government_office_region_elec(
-        year=None,
-        region_code=None,
-        data_folder='_data',
-        database_name='snecs_data.sqlite',
-        verbose=False
+        year = None,
+        region_code = None,
+        fields = None,
+        data_folder = '_data',
+        database_name = 'snecs_data.sqlite',
+        verbose = False
         ):
     ""
     table_name='elec_GOR_stacked_2005_21'
     
-    fp_database=os.path.join(data_folder,database_name)
+    filter_by = {
+        'year':year, 
+        'gor':region_code
+        }
+    filter_by = {k:v for k,v in filter_by.items() if not v is None}
     
-    where_clause=csvw_functions_extra.get_where_clause_list(
-        {'year':year, 'gor':region_code}
-        )
-        
-    query=f"SELECT * FROM {table_name} {where_clause};"
-    if verbose:
-        print(query)
+    result = \
+        csvw_functions_extra.get_rows(
+            table_name = table_name,
+            data_folder = data_folder,
+            database_name = database_name,
+            filter_by = filter_by,
+            fields = fields, 
+            verbose = verbose
+            )
     
-    with sqlite3.connect(fp_database) as conn:
-        conn.row_factory = sqlite3.Row
-        c = conn.cursor()
-        result=[dict(x) for x in c.execute(query).fetchall()]
-        
     return result
 
 
 def get_government_office_region_gas(
-        year=None,
-        region_code=None,
-        data_folder='_data',
-        database_name='snecs_data.sqlite',
-        verbose=False
+        year = None,
+        region_code = None,
+        fields = None,
+        data_folder = '_data',
+        database_name = 'snecs_data.sqlite',
+        verbose = False
         ):
     ""
     table_name='gas_GOR_stacked_2005_21'
     
-    fp_database=os.path.join(data_folder,database_name)
+    filter_by = {
+        'year':year, 
+        'region.code':region_code
+        }
+    filter_by = {k:v for k,v in filter_by.items() if not v is None}
     
-    where_clause=csvw_functions_extra.get_where_clause_list(
-        {'year':year, 'region.code':region_code}
-        )
-        
-    query=f"SELECT * FROM {table_name} {where_clause};"
-    if verbose:
-        print(query)
+    result = \
+        csvw_functions_extra.get_rows(
+            table_name = table_name,
+            data_folder = data_folder,
+            database_name = database_name,
+            filter_by = filter_by,
+            fields = fields, 
+            verbose = verbose
+            )
     
-    with sqlite3.connect(fp_database) as conn:
-        conn.row_factory = sqlite3.Row
-        c = conn.cursor()
-        result=[dict(x) for x in c.execute(query).fetchall()]
-        
     return result
     
 
 def get_local_authority_elec(
-        year=None,
-        la_code=None,
-        region=None,
-        data_folder='_data',
-        database_name='snecs_data.sqlite',
-        verbose=False
+        year = None,
+        la_code = None,
+        region = None,
+        fields = None,
+        data_folder = '_data',
+        database_name = 'snecs_data.sqlite',
+        verbose = False
         ):
     ""
     table_name='elec_LA_stacked_2005_21'
     
-    fp_database=os.path.join(data_folder,database_name)
+    filter_by = {
+        'year':year, 
+        'la_code':la_code, 
+        'region':region
+        }
+    filter_by = {k:v for k,v in filter_by.items() if not v is None}
     
-    where_clause=csvw_functions_extra.get_where_clause_list(
-        {'year':year, 'la_code':la_code, 'region':region}
-        )
-        
-    query=f"SELECT * FROM {table_name} {where_clause};"
-    if verbose:
-        print(query)
+    result = \
+        csvw_functions_extra.get_rows(
+            table_name = table_name,
+            data_folder = data_folder,
+            database_name = database_name,
+            filter_by = filter_by,
+            fields = fields, 
+            verbose = verbose
+            )
     
-    with sqlite3.connect(fp_database) as conn:
-        conn.row_factory = sqlite3.Row
-        c = conn.cursor()
-        result=[dict(x) for x in c.execute(query).fetchall()]
-        
     return result
 
 
+
 def get_local_authority_gas(
-        year=None,
-        la_code=None,
-        region=None,
-        data_folder='_data',
-        database_name='snecs_data.sqlite',
-        verbose=False
+        year = None,
+        la_code = None,
+        region = None,
+        fields = None,
+        data_folder = '_data',
+        database_name = 'snecs_data.sqlite',
+        verbose = False
         ):
     ""
     table_name='gas_LA_stacked_2005_21'
-    
-    fp_database=os.path.join(data_folder,database_name)
-    
-    where_clause=csvw_functions_extra.get_where_clause_list(
-        {'year':year, 'la.code':la_code, 'region':region}
-        )
         
-    query=f"SELECT * FROM {table_name} {where_clause};"
-    if verbose:
-        print(query)
+    filter_by = {
+        'year':year, 
+        'la.code':la_code, 
+        'region':region
+        }
+    filter_by = {k:v for k,v in filter_by.items() if not v is None}
     
-    with sqlite3.connect(fp_database) as conn:
-        conn.row_factory = sqlite3.Row
-        c = conn.cursor()
-        result=[dict(x) for x in c.execute(query).fetchall()]
-        
+    result = \
+        csvw_functions_extra.get_rows(
+            table_name = table_name,
+            data_folder = data_folder,
+            database_name = database_name,
+            filter_by = filter_by,
+            fields = fields, 
+            verbose = verbose
+            )
+    
     return result
 
 
 def get_LSOA_elec_domestic(
-        year=None,
-        la_code=None,
-        msoa_code=None,
-        lsoa_code=None,
-        data_folder='_data',
-        database_name='snecs_data.sqlite',
-        verbose=False
+        year = None,
+        la_code = None,
+        msoa_code = None,
+        lsoa_code = None,
+        fields = None,
+        data_folder = '_data',
+        database_name = 'snecs_data.sqlite',
+        verbose = False
         ):
     ""
     table_name='elec_domestic_LSOA_stacked_2010_21'
     
-    fp_database=os.path.join(data_folder,database_name)
+    filter_by = {
+        'YEAR':year, 
+        'LACode':la_code, 
+        'MSOACode':msoa_code,
+        'LSOACode':lsoa_code
+        }
+    filter_by = {k:v for k,v in filter_by.items() if not v is None}
     
-    where_clause=csvw_functions_extra.get_where_clause_list(
-        {'YEAR':year, 'LACode':la_code, 'MSOACode':msoa_code,'LSOACode':lsoa_code}
-        )
-        
-    query=f"SELECT * FROM {table_name} {where_clause};"
-    if verbose:
-        print(query)
+    result = \
+        csvw_functions_extra.get_rows(
+            table_name = table_name,
+            data_folder = data_folder,
+            database_name = database_name,
+            filter_by = filter_by,
+            fields = fields, 
+            verbose = verbose
+            )
     
-    with sqlite3.connect(fp_database) as conn:
-        conn.row_factory = sqlite3.Row
-        c = conn.cursor()
-        result=[dict(x) for x in c.execute(query).fetchall()]
-        
     return result
     
 
 def get_LSOA_gas_domestic(
-        year=None,
-        la_code=None,
-        msoa_code=None,
-        lsoa_code=None,
-        data_folder='_data',
-        database_name='snecs_data.sqlite',
-        verbose=False
+        year = None,
+        la_code = None,
+        msoa_code = None,
+        lsoa_code = None,
+        fields = None,
+        data_folder = '_data',
+        database_name = 'snecs_data.sqlite',
+        verbose = False
         ):
     ""
     table_name='gas_domestic_LSOA_stacked_2010_21'
-    
-    fp_database=os.path.join(data_folder,database_name)
-    
-    where_clause=csvw_functions_extra.get_where_clause_list(
-        {'year':year, 
-         'la.name':la_code,  # error in CSV file -> 'name' and 'code' are wrong way round
-         'msoa.name':msoa_code,
-         'lsoa.name':lsoa_code}
-        )
         
-    query=f"SELECT * FROM {table_name} {where_clause};"
-    if verbose:
-        print(query)
+    filter_by = {
+        'year':year, 
+        'la.name':la_code,  # error in CSV file -> 'name' and 'code' are wrong way round
+        'msoa.name':msoa_code,
+        'lsoa.name':lsoa_code
+        }
+    filter_by = {k:v for k,v in filter_by.items() if not v is None}
     
-    with sqlite3.connect(fp_database) as conn:
-        conn.row_factory = sqlite3.Row
-        c = conn.cursor()
-        result=[dict(x) for x in c.execute(query).fetchall()]
-        
+    result = \
+        csvw_functions_extra.get_rows(
+            table_name = table_name,
+            data_folder = data_folder,
+            database_name = database_name,
+            filter_by = filter_by,
+            fields = fields, 
+            verbose = verbose
+            )
+    
     return result
     
 
 def get_MSOA_elec_domestic(
-        year=None,
-        la_code=None,
-        msoa_code=None,
-        data_folder='_data',
-        database_name='snecs_data.sqlite',
-        verbose=False
+        year = None,
+        la_code = None,
+        msoa_code = None,
+        fields = None,
+        data_folder = '_data',
+        database_name = 'snecs_data.sqlite',
+        verbose = False
         ):
     ""
     table_name='elec_domestic_MSOA_stacked_2010_21'
     
-    fp_database=os.path.join(data_folder,database_name)
+    filter_by = {
+        'year':year, 
+        'la.code':la_code, 
+        'msoa.code':msoa_code
+        }
+    filter_by = {k:v for k,v in filter_by.items() if not v is None}
     
-    where_clause=csvw_functions_extra.get_where_clause_list(
-        {'YEAR':year, 'LACode':la_code, 'MSOAcode':msoa_code}
-        )
-        
-    query=f"SELECT * FROM {table_name} {where_clause};"
-    if verbose:
-        print(query)
+    result = \
+        csvw_functions_extra.get_rows(
+            table_name = table_name,
+            data_folder = data_folder,
+            database_name = database_name,
+            filter_by = filter_by,
+            fields = fields, 
+            verbose = verbose
+            )
     
-    with sqlite3.connect(fp_database) as conn:
-        conn.row_factory = sqlite3.Row
-        c = conn.cursor()
-        result=[dict(x) for x in c.execute(query).fetchall()]
-        
     return result
     
 
 def get_MSOA_gas_domestic(
-        year=None,
-        la_code=None,
-        msoa_code=None,
-        data_folder='_data',
-        database_name='snecs_data.sqlite',
-        verbose=False
+        year = None,
+        la_code = None,
+        msoa_code = None,
+        fields = None,
+        data_folder = '_data',
+        database_name = 'snecs_data.sqlite',
+        verbose = False
         ):
     ""
     table_name='gas_domestic_MSOA_stacked_2010_21'
     
-    fp_database=os.path.join(data_folder,database_name)
+    filter_by = {
+        'year':year, 
+        'la.code':la_code, 
+        'msoa.code':msoa_code
+        }
+    filter_by = {k:v for k,v in filter_by.items() if not v is None}
     
-    where_clause=csvw_functions_extra.get_where_clause_list(
-        {'year':year, 'la.code':la_code, 'msoa.code':msoa_code}
-        )
-        
-    query=f"SELECT * FROM {table_name} {where_clause};"
-    if verbose:
-        print(query)
+    result = \
+        csvw_functions_extra.get_rows(
+            table_name = table_name,
+            data_folder = data_folder,
+            database_name = database_name,
+            filter_by = filter_by,
+            fields = fields, 
+            verbose = verbose
+            )
     
-    with sqlite3.connect(fp_database) as conn:
-        conn.row_factory = sqlite3.Row
-        c = conn.cursor()
-        result=[dict(x) for x in c.execute(query).fetchall()]
-        
     return result
     
 
 def get_MSOA_elec_non_domestic(
-        year=None,
-        la_code=None,
-        msoa_code=None,
-        data_folder='_data',
-        database_name='snecs_data.sqlite',
-        verbose=False
+        year = None,
+        la_code = None,
+        msoa_code = None,
+        fields = None,
+        data_folder = '_data',
+        database_name = 'snecs_data.sqlite',
+        verbose = False
         ):
     ""
     table_name='elec_non_domestic_MSOA_stacked_2010_21'
     
-    fp_database=os.path.join(data_folder,database_name)
+    filter_by = {
+        'year':year, 
+        'la.code':la_code, 
+        'msoa.code':msoa_code
+        }
+    filter_by = {k:v for k,v in filter_by.items() if not v is None}
     
-    where_clause=csvw_functions_extra.get_where_clause_list(
-        {'YEAR':year, 'LACode':la_code, 'MSOAcode':msoa_code}
-        )
-        
-    query=f"SELECT * FROM {table_name} {where_clause};"
-    if verbose:
-        print(query)
+    result = \
+        csvw_functions_extra.get_rows(
+            table_name = table_name,
+            data_folder = data_folder,
+            database_name = database_name,
+            filter_by = filter_by,
+            fields = fields, 
+            verbose = verbose
+            )
     
-    with sqlite3.connect(fp_database) as conn:
-        conn.row_factory = sqlite3.Row
-        c = conn.cursor()
-        result=[dict(x) for x in c.execute(query).fetchall()]
-        
     return result
      
 
 def get_MSOA_gas_non_domestic(
-        year=None,
-        la_code=None,
-        msoa_code=None,
+        year = None,
+        la_code = None,
+        msoa_code = None,
+        fields = None,
         data_folder='_data',
         database_name='snecs_data.sqlite',
-        verbose=False
+        verbose = False
         ):
     ""
     table_name='gas_non_domestic_MSOA_stacked_2010_21'
-    
-    fp_database=os.path.join(data_folder,database_name)
-    
-    where_clause=csvw_functions_extra.get_where_clause_list(
-        {'year':year, 'la.code':la_code, 'msoa.code':msoa_code}
-        )
         
-    query=f"SELECT * FROM {table_name} {where_clause};"
-    if verbose:
-        print(query)
+    filter_by = {
+        'year':year, 
+        'la.code':la_code, 
+        'msoa.code':msoa_code
+        }
+    filter_by = {k:v for k,v in filter_by.items() if not v is None}
     
-    with sqlite3.connect(fp_database) as conn:
-        conn.row_factory = sqlite3.Row
-        c = conn.cursor()
-        result=[dict(x) for x in c.execute(query).fetchall()]
-        
+    result = \
+        csvw_functions_extra.get_rows(
+            table_name = table_name,
+            data_folder = data_folder,
+            database_name = database_name,
+            filter_by = filter_by,
+            fields = fields, 
+            verbose = verbose
+            )
+    
     return result
     
 
 def get_postcode_elec_all_meters(
         year,
-        postcode=None,
-        outcode=None,
-        data_folder='_data',
-        database_name='snecs_data.sqlite',
-        verbose=False
+        postcode = None,
+        outcode = None,
+        fields = None,
+        data_folder = '_data',
+        database_name = 'snecs_data.sqlite',
+        verbose = False
         ):
     ""
     table_name=f'Postcode_level_all_meters_electricity_{year}'
     
-    fp_database=os.path.join(data_folder,database_name)
-    
-    where_clause=csvw_functions_extra.get_where_clause_list(
-        dict(Postcode=postcode, Outcode=outcode)
+    filter_by = dict(
+        Postcode = postcode, 
+        Outcode = outcode
         )
-        
-    query=f"SELECT * FROM {table_name} {where_clause};"
-    if verbose:
-        print(query)
+    filter_by = {k:v for k,v in filter_by.items() if not v is None}
     
-    with sqlite3.connect(fp_database) as conn:
-        conn.row_factory = sqlite3.Row
-        c = conn.cursor()
-        result=[dict(x) for x in c.execute(query).fetchall()]
-        
+    result = \
+        csvw_functions_extra.get_rows(
+            table_name = table_name,
+            data_folder = data_folder,
+            database_name = database_name,
+            filter_by = filter_by,
+            fields = fields, 
+            verbose = verbose
+            )
+    
     return result
 
 
 def get_postcode_elec_economy_7(
         year,
-        postcode=None,
-        outcode=None,
-        data_folder='_data',
-        database_name='snecs_data.sqlite',
-        verbose=False
+        postcode = None,
+        outcode = None,
+        fields = None,
+        data_folder = '_data',
+        database_name = 'snecs_data.sqlite',
+        verbose = False
         ):
     ""
     table_name=f'Postcode_level_economy_7_electricity_{year}'
     
-    fp_database=os.path.join(data_folder,database_name)
-    
-    where_clause=csvw_functions_extra.get_where_clause_list(
-        dict(Postcode=postcode, Outcode=outcode)
+    filter_by = dict(
+        Postcode = postcode, 
+        Outcode = outcode
         )
-        
-    query=f"SELECT * FROM {table_name} {where_clause};"
-    if verbose:
-        print(query)
+    filter_by = {k:v for k,v in filter_by.items() if not v is None}
     
-    with sqlite3.connect(fp_database) as conn:
-        conn.row_factory = sqlite3.Row
-        c = conn.cursor()
-        result=[dict(x) for x in c.execute(query).fetchall()]
-        
+    result = \
+        csvw_functions_extra.get_rows(
+            table_name = table_name,
+            data_folder = data_folder,
+            database_name = database_name,
+            filter_by = filter_by,
+            fields = fields, 
+            verbose = verbose
+            )
+    
     return result
-        
+            
 
 def get_postcode_elec_standard(
         year,
-        postcode=None,
-        outcode=None,
-        data_folder='_data',
-        database_name='snecs_data.sqlite',
-        verbose=False
+        postcode = None,
+        outcode = None,
+        fields = None,
+        data_folder = '_data',
+        database_name = 'snecs_data.sqlite',
+        verbose = False
         ):
     ""
     table_name=f'Postcode_level_standard_electricity_{year}'
     
-    fp_database=os.path.join(data_folder,database_name)
-    
-    where_clause=csvw_functions_extra.get_where_clause_list(
-        dict(Postcode=postcode, Outcode=outcode)
+    filter_by = dict(
+        Postcode = postcode, 
+        Outcode = outcode
         )
-        
-    query=f"SELECT * FROM {table_name} {where_clause};"
-    if verbose:
-        print(query)
+    filter_by = {k:v for k,v in filter_by.items() if not v is None}
     
-    with sqlite3.connect(fp_database) as conn:
-        conn.row_factory = sqlite3.Row
-        c = conn.cursor()
-        result=[dict(x) for x in c.execute(query).fetchall()]
-        
+    result = \
+        csvw_functions_extra.get_rows(
+            table_name = table_name,
+            data_folder = data_folder,
+            database_name = database_name,
+            filter_by = filter_by,
+            fields = fields, 
+            verbose = verbose
+            )
+    
     return result
-
-
+    
+    
 def get_postcode_gas(
         year,
-        postcode=None,
-        outcode=None,
-        data_folder='_data',
-        database_name='snecs_data.sqlite',
-        verbose=False
+        postcode = None,
+        outcode = None,
+        fields = None,
+        data_folder = '_data',
+        database_name = 'snecs_data.sqlite',
+        verbose = False
         ):
     ""
+    
     table_name=f'Postcode_level_gas_{year}'
     
-    fp_database=os.path.join(data_folder,database_name)
-    
-    where_clause=csvw_functions_extra.get_where_clause_list(
-        dict(Postcode=postcode, Outcode=outcode)
+    filter_by = dict(
+        Postcode = postcode, 
+        Outcode = outcode
         )
-        
-    query=f"SELECT * FROM {table_name} {where_clause};"
-    if verbose:
-        print(query)
+    filter_by = {k:v for k,v in filter_by.items() if not v is None}
     
-    with sqlite3.connect(fp_database) as conn:
-        conn.row_factory = sqlite3.Row
-        c = conn.cursor()
-        result=[dict(x) for x in c.execute(query).fetchall()]
-        
+    result = \
+        csvw_functions_extra.get_rows(
+            table_name = table_name,
+            data_folder = data_folder,
+            database_name = database_name,
+            filter_by = filter_by,
+            fields = fields, 
+            verbose = verbose
+            )
+    
     return result
+    
     
     
